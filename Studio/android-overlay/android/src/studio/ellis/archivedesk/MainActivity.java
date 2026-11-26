@@ -74,11 +74,13 @@ public final class MainActivity extends Activity {
         assets.put("/workdesk.js", "text/javascript");
         assets.put("/studio-render.js", "text/javascript");
         assets.put("/studio.js", "text/javascript");
+        assets.put("/wide-net.js", "text/javascript");
         ASSETS = Collections.unmodifiableMap(assets);
     }
 
     private WebView browser;
     private ValueCallback<Uri[]> pendingSelection;
+    private final AtomicBoolean wideScouting = new AtomicBoolean();
     private final AtomicBoolean scouting = new AtomicBoolean();
     private String pendingExport;
     private String pendingCard, pendingView, pendingBundle;
@@ -545,6 +547,35 @@ public final class MainActivity extends Activity {
         @JavascriptInterface public void configureBackgroundScout(boolean enabled){runOnUiThread(()->{if(enabled && Build.VERSION.SDK_INT>=33 && checkSelfPermission("android.permission.POST_NOTIFICATIONS")!=android.content.pm.PackageManager.PERMISSION_GRANTED)requestPermissions(new String[]{"android.permission.POST_NOTIFICATIONS"},91);BackgroundScout.configure(MainActivity.this,enabled);});}
         @JavascriptInterface public String backgroundScoutResult(){return BackgroundScout.prefs(MainActivity.this).getString("result", "");}
         @JavascriptInterface public String takeScoutTarget(){Intent i=getIntent();if(i==null||!i.hasExtra("scoutSource"))return "null";String source=i.getStringExtra("scoutSource");i.removeExtra("scoutSource");return org.json.JSONObject.quote(source==null?"":source);}
+        @JavascriptInterface public void openWideNetSearch(String address) {
+            if (address == null || address.length() > 3500) return;
+            Uri uri = Uri.parse(address);
+            if (!"https".equals(uri.getScheme()) || !"www.google.com".equals(uri.getHost()) ||
+                uri.getPort() != -1 || uri.getUserInfo() != null || !"/search".equals(uri.getPath())) return;
+            runOnUiThread(() -> {
+                try { startActivity(new Intent(Intent.ACTION_VIEW, uri)); }
+                catch (ActivityNotFoundException ignored) { notifyUser("No browser is available to search."); }
+            });
+        }
+
+        @JavascriptInterface public boolean refreshWideNet() {
+            if (!wideScouting.compareAndSet(false, true)) return true;
+            new Thread(() -> {
+                String result;
+                try { result = WideNetScout.fetch(); }
+                catch (RuntimeException unavailable) { result = "{\"rows\":[],\"summary\":\"Sweep unavailable.\"}"; }
+                final String payload = result;
+                runOnUiThread(() -> {
+                    wideScouting.set(false);
+                    String page = browser.getUrl();
+                    if (!isFinishing() && !isDestroyed() && page != null && local(Uri.parse(page))) {
+                        browser.evaluateJavascript("window.WideNet?.receive("+payload+")",null);
+                    }
+                });
+            },"wide-net-scout").start();
+            return true;
+        }
+
         @JavascriptInterface public void refreshPublicLeads() {
             if (!scouting.compareAndSet(false, true)) return;
             new Thread(() -> {

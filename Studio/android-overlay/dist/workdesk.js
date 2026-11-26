@@ -411,5 +411,26 @@ window.ArchiveWorkdesk = (() => {
     return true;
   }
   function openSource(source){const row=records().find(r=>r.source===source);if(!row||!root?.isConnected)return;open(row);if(!row.draft){const draft=proposal(row);root.querySelector('[data-desk-form]').elements.draft.value=draft;save({...row,draft,approval:'draft'});} }
-  return {openSource,addCampaign,connect(adapter){api=adapter;},mount,markup,receive,leadIsActive,marketScore,feasibility};
+  function addScoutedBrief(brief) {
+    const rows=records();
+    const current=rows.find(row=>row.source===brief.url);
+    if(!current){
+      const notes=[brief.description,brief.approach==='new'?'Produce new work':brief.approach==='existing'?'Adapt existing work':'',
+        brief.production?'Production deadline '+brief.production:'',
+        brief.official?'Organizer: '+brief.official:'',
+        brief.niche?'Specific niche: '+brief.niche:'',
+        brief.fit.competition.measured?'Published count: '+brief.fit.competition.observed+' checked '+brief.reviewedOn+' at '+brief.competitionSource:'',
+        brief.hours?'Estimate '+brief.hours+' h, '+brief.fit.buffered+' h with buffer, '+(brief.available||'unknown')+' h available':'',
+        brief.fit.cause.length?'Cause terms: '+brief.fit.cause.join(', '):'',
+        brief.fit.aesthetic.length?'Aesthetic terms: '+brief.fit.aesthetic.join(', '):'',
+        'Check the official application route, eligibility, rights and compensation.'].filter(Boolean).join('\n');
+      const row={id:crypto.randomUUID(),name:brief.title,kind:brief.kind==='intake'?'intake':'brief',
+        category:brief.lane,source:brief.url,contact:brief.official||'',deadline:brief.closing||'',checked:'',verified:false,notes:notes.slice(0,3000)};
+      if(!api.write([row,...rows]))return false;
+    }
+    window.addEventListener('hashchange',()=>openSource(brief.url),{once:true});
+    location.hash='workdesk';
+    return true;
+  }
+  return {openSource,addScoutedBrief,addCampaign,connect(adapter){api=adapter;},mount,markup,receive,leadIsActive,marketScore,feasibility};
 })();

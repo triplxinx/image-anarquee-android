@@ -4,7 +4,7 @@ const leads = window.ARCHIVE_LEADS.slice();
 const steps = window.ARCHIVE_PLAN;
 const key = 'archive-launch-desk.v1';
 const statuses = ['To contact','Contacted','Replied','Quoted','Booked','Paid','Paused','Closed'];
-const names = {studio:'Authoring Studio',launch:'Launch plan',leads:'Lead desk',albums:'Album intake',systems:'Systems',workdesk:'Workdesk',cards:'Trading cards',affiliates:'Affiliates',merch:'XXXINK merch'};
+const names = {wide:'Wide Net',studio:'Authoring Studio',launch:'Launch plan',leads:'Lead desk',albums:'Album intake',systems:'Systems',workdesk:'Workdesk',cards:'Trading cards',affiliates:'Affiliates',merch:'XXXINK merch'};
 const seedAlbums = [
   {id:'boooo',name:'BOOOO',url:'',rights:'Review needed',notes:'Seattle night, cityscapes, street documentary. Review depicted artwork and signs per use.'},
   {id:'prnto',name:'PRNTO',url:'',rights:'Review needed',notes:'Glitch, mirrored texture and monochrome studies. Find clean originals where previews show app controls.'},
@@ -179,7 +179,8 @@ function render(){
   document.querySelectorAll('[data-tab]').forEach(a=>{
     if(a.dataset.tab===tab)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');
   });
-  view.innerHTML={studio:()=>window.ArchiveStudio.markup,launch:renderLaunch,leads:renderLeads,albums:renderAlbums,systems:renderSystems,merch:()=>window.Merch.markup,affiliates:()=>window.AffiliateCampaigns.markup,workdesk:() => window.ArchiveWorkdesk.markup,cards:()=>window.CardDesk.markup}[tab]();
+  view.innerHTML={wide:()=>window.WideNet.markup,studio:()=>window.ArchiveStudio.markup,launch:renderLaunch,leads:renderLeads,albums:renderAlbums,systems:renderSystems,merch:()=>window.Merch.markup,affiliates:()=>window.AffiliateCampaigns.markup,workdesk:() => window.ArchiveWorkdesk.markup,cards:()=>window.CardDesk.markup}[tab]();
+  if(tab==='wide')window.WideNet.mount(view);
   if(tab==='studio')void window.ArchiveStudio.mount(view);
   if(tab==='merch')window.Merch.mount(view,()=>state.merch||{},(id,draft)=>{
     const old=state.merch;state.merch={...old,[id]:draft};if(saved())return true;state.merch=old;return false;

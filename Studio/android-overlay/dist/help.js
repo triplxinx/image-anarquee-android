@@ -5,6 +5,7 @@
   const back=dialog.querySelector('[data-help-back]'),next=dialog.querySelector('[data-help-next]');
   const selector='button,a[href],input,select,textarea,summary,label,[role="button"],[contenteditable="true"],[tabindex="0"],[data-desk-refresh-zone]';
   const rules=[
+    ['[data-tab="wide"]','Open public searches and directories or sweep supported live sources.','Review the original listing and compare its cause, aesthetic, medium and your production capacity.','Send a candidate to Workdesk for human verification and drafting.'],
     ['[data-tab="studio"],[data-photo-studio],[data-studio-lead],[data-desk-studio]','Bring in one original image and choose a digital or print format.','Set the composition and check the rights. For a print PDF, check effective source resolution.','Export the layout, or fill in the licensing brief and open a private offer.'],
     ['[data-studio-variations] summary,[data-studio-look]','Compare the same crop with the title at the top, title at the bottom, or image only.','Tap the direction you want in the main proof.'],
     ['[data-studio-action="archive"]','Send a watermarked proof to the XXX!NK archive for owner review.','Sign in to archive admin first, then queue the image here. Review its visibility in archive admin.'],
