@@ -64,7 +64,7 @@ jobs:
         env:
           KEYSTORE_B64: ${{ secrets.IA_NEXT_KEYSTORE_B64 }}
           ARCHIVE_KEY_PASSWORD: ${{ secrets.IA_NEXT_KEY_PASSWORD }}
-          ARCHIVE_APPLICATION_ID: studio.ellis.archivedesk.next
+          ARCHIVE_APPLICATION_ID: studio.ellis.archivedesk.next.release
         run: |
           set -euo pipefail
           : "${KEYSTORE_B64:?Missing IA_NEXT_KEYSTORE_B64 secret}"
@@ -74,11 +74,11 @@ jobs:
           umask 077
           trap 'rm -f "$ARCHIVE_KEYSTORE"' EXIT
           printf '%s' "$KEYSTORE_B64" | base64 -d > "$ARCHIVE_KEYSTORE"
-          bash phone-host-next/android/build.sh "$GITHUB_WORKSPACE/iMAG3-Next.apk"
-          "$ANDROID_SDK_ROOT/build-tools/35.0.0/apksigner" verify --verbose iMAG3-Next.apk
-          "$ANDROID_SDK_ROOT/build-tools/35.0.0/aapt" dump badging iMAG3-Next.apk | grep -F "package: name='studio.ellis.archivedesk.next'"
+          bash phone-host-next/android/build.sh "$GITHUB_WORKSPACE/iMAG3-Next-Release.apk"
+          "$ANDROID_SDK_ROOT/build-tools/35.0.0/apksigner" verify --verbose iMAG3-Next-Release.apk
+          "$ANDROID_SDK_ROOT/build-tools/35.0.0/aapt" dump badging iMAG3-Next-Release.apk | grep -F "package: name='studio.ellis.archivedesk.next.release'"
       - uses: actions/upload-artifact@v4
         with:
-          name: iMAG3-Next
-          path: iMAG3-Next.apk
+          name: iMAG3-Next-Release
+          path: iMAG3-Next-Release.apk
           if-no-files-found: error
