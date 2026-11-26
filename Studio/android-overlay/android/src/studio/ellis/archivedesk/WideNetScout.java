@@ -104,7 +104,8 @@ final class WideNetScout {
     private static JSONArray tenders() throws IOException, JSONException {
         JSONArray fields = new JSONArray(Arrays.asList("publication-number","notice-title","deadline-receipt-tender-date-lot","description-proc"));
         String query = "(classification-cpv = 92111200 OR classification-cpv = 79961000 OR classification-cpv = 79822500)"
-            +" AND publication-date >= "+day(-45).replace("-","");
+            +" AND publication-date >= "+day(-45).replace("-","")
+            +" AND deadline-receipt-tender-date-lot >= "+day(0).replace("-","");
         JSONObject body = new JSONObject().put("query",query).put("fields",fields).put("limit",40).put("page",1).put("scope","ACTIVE");
         JSONArray notices = new JSONObject(request(TED, body)).getJSONArray("notices");
         JSONArray rows = new JSONArray();
@@ -155,7 +156,7 @@ final class WideNetScout {
     private static String lane(String raw, String fallback) {
         String value = raw.toLowerCase(Locale.ROOT);
         if (value.matches("(?s).*(photo|fotograf|image licensing).*")) return "licensing";
-        if (value.matches("(?s).*(documentary|documentaire|film|animation|video|video|motion|sound|multimedia).*")) return "video";
+        if (value.matches("(?s).*(documentary|documentaire|film|animation|video|motion|sound|multimedia).*")) return "video";
         if (value.matches("(?s).*(installation|exhibition|immersive|virtual museum|interactive|digital archive).*")) return "landing";
         if (value.matches("(?s).*(visual art|graphic|illustrat|zine|comic|poster|collage|printmak|design).*")) return "design";
         if (value.matches("(?s).*(oral history|storytelling|writer|editorial|public humanities|publishing).*")) return "copy";
