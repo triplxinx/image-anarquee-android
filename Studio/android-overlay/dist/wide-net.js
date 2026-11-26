@@ -23,6 +23,28 @@ window.WideNet = (() => {
     ['EU Culture and Creativity','European creative funding','https://culture.ec.europa.eu/funding/calls'],
     ['GETS','Aotearoa New Zealand public tenders','https://www.procurement.govt.nz/suppliers/gets/']
   ];
+  const starter=[
+    ['CCA–WRI Fellowship · Vacancy','https://www.cca.qc.ca/en/101525/cca-wri-research-fellowship-program','2026-11-30','grant','copy',
+      'CAD 5,000 monthly. Consider a Seattle documentary photography or public memory research proposal on vacancy and displacement. Requires substantial practice or relevant doctoral research and one to three months in Montréal.',
+      'Research on vacancy with an in-person Montréal residency.'],
+    ['Gallery 4Culture · Exhibition proposals','https://www.4culture.org/grants/gallery-4culture/','2026-12-10','open','landing',
+      'Pioneer Square exhibition for eligible King County artists. Consider an urban photography and zine installation about housing justice or neighborhood change.',
+      'King County residency and an exhibition proposal.'],
+    ['Housing Assistance Council · Website redesign RFP','https://ruralhome.org/rfp-website-redesign/','2026-12-15','commission','landing',
+      'USD 50,000–75,000. U.S.-registered vendor required. Accessible website redesign with multimedia and content migration for rural affordable housing. Scope with an experienced delivery team.',
+      'U.S.-registered vendor with comparable references and capacity for a full website redesign.'],
+    ['New Orleans Jazz & Heritage Archive · Research grant','https://www.jazzandheritage.org/fellowship-research-grant-2/','2026-12-15','grant','copy',
+      'USD 5,000. Louisiana music and cultural heritage research, with a prior record of public scholarship. Consider a public memory project built around a specific archive collection.',
+      'Louisiana music or cultural heritage and evidence of completed scholarship.'],
+    ['4Culture · 2D public art roster','https://www.4culture.org/grants/4culture-public-art-roster-2d/','2027-01-14','open','design',
+      'Washington State artists can submit a portfolio for possible future design-only commissions. Includes photography, graphic design, print and collage. A roster place does not guarantee work.',
+      'Washington residency and ability to supply fabrication-ready 2D artwork.'],
+    ['International Mute Photo Festival · Nature Ate the Pixels','https://on-the-move.org/news/international-mute-photo-festival-2027-call-photography-greece','2027-04-30','open','licensing',
+      'Create a new lo-fi photography series using a children’s thermal printer camera. Free international open call with exhibition production support for selected work.',
+      'Adult series of six to nine images made with a children’s thermal printer camera.',
+      'https://drive.google.com/file/d/1h8TdcgL9GO-gKWc3VmX4saFE-FhQOSnd/view']
+  ].map(([title,url,closing,kind,lane,description,niche,official=url])=>
+    ({title,url,closing,kind,lane,description,niche,official,source:'Starter shortlist · checked Nov 26, 2026'}));
   const languages={
     en:['"request for proposals" OR "open call" OR "paid pitch"','"documentary" OR "visual storytelling" OR "graphic design"','"community archive" OR "housing justice"'],
     es:['"convocatoria" OR "licitación" OR "comisión artística"','"documental" OR "fotografía" OR "diseño gráfico"','"memoria colectiva" OR "derecho a la vivienda"'],
@@ -131,7 +153,7 @@ window.WideNet = (() => {
     <header class="sectiontop"><h1>Wide Net</h1><p>Find creative requests by cause, aesthetic and medium. Keep work you can make in time in the running.</p></header>
     <div class="wide-grid" data-wide-net>
     <section class="card"><h2>Search the public web</h2>
-      <button class="primary" type="button" data-wide-sweep data-help="Search supported public opportunity sources. Check the original listing for eligibility, pay, and deadlines.">Sweep live sources</button>
+      <button class="primary" type="button" data-wide-sweep data-help="Search supported public opportunity sources. Check the original listing for eligibility, pay, and deadlines.">Sweep live sources</button> <button class="quiet" type="button" data-wide-starter>Load reviewed starter leads</button>
       <form class="wide-search"><label class="field">Search language<select name="language">
       ${options({en:'English',es:'Español',fr:'Français',pt:'Português',de:'Deutsch',ar:'العربية',ja:'日本語'})}</select></label>
       <label class="field">Optional theme<input type="search" name="theme" maxlength="80" placeholder="e.g. disability justice"></label>
@@ -214,8 +236,11 @@ window.WideNet = (() => {
   }
   function receive(result) {
     busy=false;
+    addResults(result);
+  }
+  function addResults(result) {
     const button=root?.querySelector('[data-wide-sweep]');
-    if(button)button.disabled=false;
+    if(button)button.disabled=busy;
     const seen=new Set(state.rows.map(row=>row.url));
     const incoming=[];
     for(const raw of Array.isArray(result?.rows)?result.rows:[]){
@@ -224,7 +249,8 @@ window.WideNet = (() => {
       if(!url||seen.has(url)||!raw.title||!Object.hasOwn(lanes,raw.lane)||!Object.hasOwn(kinds,raw.kind))continue;
       seen.add(url);
       incoming.push({url,title:String(raw.title).slice(0,180),description:String(raw.description||'').slice(0,2000),kind:raw.kind,lane:raw.lane,
-        closing:/^\d{4}-\d{2}-\d{2}$/.test(raw.closing)?raw.closing:'',source:String(raw.source||'').slice(0,120)});
+        closing:/^\d{4}-\d{2}-\d{2}$/.test(raw.closing)?raw.closing:'',source:String(raw.source||'').slice(0,120),
+        official:link(raw.official),niche:String(raw.niche||'').slice(0,300)});
     }
     if(incoming.length&&!persist({...state,rows:[...incoming,...state.rows]}))return;
     render();notify((result?.summary||'Sweep unavailable.')+' '+incoming.length+' new briefs to review.'+(state.rows.length>=400?' Shortlist is full. Remove reviewed items to make room.':''));
@@ -242,6 +268,9 @@ window.WideNet = (() => {
     for(const key of ['cause','aesthetic'])profile.elements[key].value=state[key];
     root.querySelector('[data-wide-sweep]').disabled=busy;
     root.querySelector('[data-wide-sweep]').onclick=sweep;
+    root.querySelector('[data-wide-starter]').onclick=()=>addResults({
+      rows:starter.filter(row=>row.closing>=today()),summary:'Starter shortlist checked November 26, 2026.'
+    });
     root.querySelector('[data-wide-filter]').onchange=render;
     root.querySelector('.wide-search').onsubmit=event=>{
       event.preventDefault();const fields=event.currentTarget.elements;
