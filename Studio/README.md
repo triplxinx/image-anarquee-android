@@ -1,0 +1,2 @@
+# iMAG3 Studio and XXX!NK
+Run `bash Studio/assemble.sh` from the repository to assemble the Android source and the deployable PHP website into a new `studio-build` folder. The checked-in Next archive supplies the original dependencies and assets. The editable Studio overlay supplies the updates, and the assembly command shares the same web dashboard between Android and the PHP site. See `studio-build/android-source/README.md` and `studio-build/web/RELEASE.md` for signing, testing and deployment.

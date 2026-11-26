@@ -1,0 +1,33 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="studio.ellis.archivedesk.studio" android:versionCode="18" android:versionName="1.16.0-studio">
+    <uses-sdk android:minSdkVersion="23" android:targetSdkVersion="35"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-feature android:name="android.hardware.camera.any" android:required="false"/>
+    <application android:label="iMAG3 Anarqeə! Studio" android:icon="@drawable/archive_icon"
+        android:theme="@android:style/Theme.Material.NoActionBar" android:allowBackup="false"
+        android:usesCleartextTraffic="false">
+        <service android:name="studio.ellis.archivedesk.BackgroundScout" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="true"/>
+        <activity android:name="studio.ellis.archivedesk.PhoneHostActivity" android:exported="false"/>
+        <service android:name="studio.ellis.archivedesk.PhoneHostService" android:exported="false" android:foregroundServiceType="specialUse">
+            <property android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="User-initiated local licensing website. Continues only while the owner keeps the site running."/>
+        </service>
+        <activity android:name="studio.ellis.archivedesk.CardCameraActivity" android:exported="false" android:screenOrientation="portrait" android:theme="@style/AcidCameraTheme"/>
+        <activity android:name="studio.ellis.archivedesk.RasterActivity" android:exported="false" android:theme="@style/AcidCameraTheme"/>
+        <activity android:name="com.acid.camera.MainActivity" android:exported="false" android:screenOrientation="portrait" android:theme="@style/AcidCameraTheme"/>
+        <activity android:name="com.acid.camera.SensorLabActivity" android:exported="false" android:screenOrientation="portrait" android:theme="@style/AcidCameraTheme"/>
+        <service android:name="com.acid.camera.ScreenRecorderService" android:exported="false" android:foregroundServiceType="mediaProjection"/>
+        <activity android:name="com.affiliateflow.launcher.MainActivity" android:exported="false" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="studio.ellis.archivedesk.MainActivity" android:configChanges="orientation|screenSize|keyboardHidden" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
