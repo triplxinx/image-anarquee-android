@@ -1,6 +1,3 @@
 # Roadmap
-- [x] Kotlin activity with help-mode dialogs
-- [ ] Photo Picker, Room database, CameraX scanner
-- [ ] Verified lead research and review-first outreach
-- [ ] Secure payments and affiliate disclosures
-- [ ] Android build and device tests
+
+The active Android app, dashboard and web archive are in [Studio](../Studio/README.md). The [requirements register](PROJECT_HISTORY_AND_REQUIREMENTS.md) preserves the original scaffold inventory and requested features. Verify current delivery against the assembled Studio release, the published site and a signed Android build as applicable.

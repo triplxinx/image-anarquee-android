@@ -1,0 +1,18 @@
+:root{color-scheme:dark;--ink:#f4f2e9;--muted:#b7b8b0;--base:#111311;--panel:#1b1e1a;--line:#383d34;--accent:#c2f55b}
+*{box-sizing:border-box}body{margin:0;background:var(--base);color:var(--ink);font:16px/1.6 system-ui,sans-serif}
+.masthead{display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;padding:1rem max(5vw,1rem);border-bottom:1px solid var(--line);color:var(--muted)}
+.mark{font-size:1.6rem;font-weight:900;letter-spacing:-.09em;text-decoration:none}main{width:min(1040px,92vw);margin:clamp(2rem,6vw,5rem) auto}
+a{color:var(--accent);overflow-wrap:anywhere}h1,h2{line-height:1.06;letter-spacing:-.043em;overflow-wrap:anywhere}
+h1{font-size:clamp(2.5rem,7vw,5.2rem);margin:.1em 0 .35em}h2{margin:.1em 0 .55em;font-size:1.55rem}
+.eyebrow{color:var(--accent);font-size:.8rem;text-transform:uppercase;letter-spacing:.12em;font-weight:750}.lede{font-size:1.18rem;max-width:72ch}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:clamp(1rem,3vw,2rem);margin:1.2rem 0}
+.pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.2rem}.terms{align-items:start}.terms .panel{margin-top:0}
+figure img{display:block;width:100%;max-height:760px;object-fit:contain;background:#10110f;border-radius:5px}figcaption{font-weight:700;margin-bottom:.7rem}
+label,.stack{display:grid;gap:.45rem;min-width:0}.stack{gap:1.1rem}.compact{max-width:32rem}
+textarea,input{width:100%;font:inherit;color:inherit;background:#111411;border:1px solid #686e63;padding:.65rem .8rem;border-radius:6px}
+textarea{min-height:6em;resize:vertical}.check,.actions{display:flex;align-items:center;gap:.8rem;flex-wrap:wrap}.check input{width:auto}
+button,.button{justify-self:start;display:inline-block;text-decoration:none;padding:.7rem 1rem;font:inherit;font-weight:750;background:var(--accent);color:#171b12;border:1px solid transparent;border-radius:6px;cursor:pointer}
+button.secondary{background:transparent;color:var(--ink);border-color:#747c6c}.panel>form{margin-top:1rem}
+small,[data-copy-status]{color:var(--muted)}.notice{border:1px solid #f5a67e;padding:.8rem 1rem;border-radius:6px}.multiline{white-space:pre-wrap;overflow-wrap:anywhere}
+.offer-list{list-style:none;padding:0}.offer-list li{display:flex;justify-content:space-between;gap:1rem;border-top:1px solid var(--line);padding:.75rem 0}
+@media(max-width:640px){.pair{grid-template-columns:1fr}.masthead{gap:.7rem}}

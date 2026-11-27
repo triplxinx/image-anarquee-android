@@ -1,0 +1,155 @@
+[
+  {
+    "id": "mill-creek",
+    "name": "Mill Creek Sports",
+    "type": "Direct buyer",
+    "tags": [
+      "sports",
+      "pokémon",
+      "memorabilia",
+      "non-sports",
+      "slab",
+      "collection"
+    ],
+    "location": "Mill Creek, WA",
+    "url": "https://www.millcreeksports.com/we-buy-collections/",
+    "signal": "specialize in buying",
+    "description": "Local cash-buying intake for cards and collections. Ask whether they are buying your specific card and what photos they need."
+  },
+  {
+    "id": "card-kingdom",
+    "name": "Card Kingdom",
+    "type": "Direct buyer",
+    "tags": [
+      "magic",
+      "mtg",
+      "the gathering"
+    ],
+    "url": "https://www.cardkingdom.com/purchasing/buylist",
+    "verify": "https://cardkingdom.freshdesk.com/support/solutions/articles/3000093663-i-m-a-first-time-seller-how-do-i-sell-my-cards-",
+    "signal": "singles buylist",
+    "description": "Search the live Magic buylist for the exact set, finish, and quantity. A listed buy price can change."
+  },
+  {
+    "id": "dave-adams",
+    "name": "Dave & Adam’s",
+    "type": "Direct buyer",
+    "tags": [
+      "sports",
+      "pokémon",
+      "collection",
+      "sealed",
+      "slab",
+      "vintage",
+      "non-sports"
+    ],
+    "url": "https://www.daveandadamsstore.com/sell-to-us/",
+    "signal": "sell to us",
+    "description": "Dealer buying intake. Check eligible categories and reach their buyer for an actual quote."
+  },
+  {
+    "id": "goldin",
+    "name": "Goldin",
+    "type": "Consignment",
+    "tags": [
+      "sports",
+      "slab",
+      "vintage",
+      "rare",
+      "autograph",
+      "pokémon"
+    ],
+    "url": "https://goldin.co/about/experts",
+    "signal": "sell@goldin.com",
+    "description": "Request review for high-end collectibles. Ask about minimum value, fees, and auction timing."
+  },
+  {
+    "id": "comc",
+    "name": "COMC",
+    "type": "Consignment",
+    "tags": [
+      "sports",
+      "pokémon",
+      "non-sports",
+      "collection",
+      "slab"
+    ],
+    "url": "https://comc.zendesk.com/hc/en-us/articles/4405813113755-Consignment-Introduction-FAQ",
+    "signal": "consignment business",
+    "description": "Submit eligible cards for listing. Review intake fees, processing time, storage, and payout."
+  },
+  {
+    "id": "tcgplayer",
+    "name": "TCGplayer",
+    "type": "Marketplace",
+    "tags": [
+      "pokémon",
+      "magic",
+      "mtg",
+      "yugioh",
+      "one piece",
+      "lorcana",
+      "tcg",
+      "digimon"
+    ],
+    "url": "https://help.tcgplayer.com/hc/en-us/articles/201318336-How-do-I-sell-my-collectibles-on-TCGplayer",
+    "signal": "selling on tcgplayer",
+    "description": "Self-listing marketplace. Match the exact product, condition and finish. Check fees, restrictions and shipping."
+  },
+  {
+    "id": "ebay",
+    "name": "eBay Product Research",
+    "type": "Marketplace",
+    "tags": [
+      "sports",
+      "pokémon",
+      "magic",
+      "mtg",
+      "tcg",
+      "non-sports",
+      "slab",
+      "vintage",
+      "memorabilia",
+      "yugioh",
+      "one piece",
+      "lorcana"
+    ],
+    "url": "https://www.ebay.com/sellercenter/growth/ebay-research-tools",
+    "signal": "product research",
+    "description": "Use exact sold comparables and check accepted offer amounts in Product Research if eligible."
+  },
+  {
+    "id": "wssca",
+    "name": "Washington State Sports Collectors Association",
+    "type": "Collector referral",
+    "tags": [
+      "sports",
+      "baseball",
+      "basketball",
+      "football",
+      "hockey",
+      "collection",
+      "memorabilia"
+    ],
+    "location": "Seattle area, WA",
+    "url": "https://www.wsscaseattle.com/faqs.html",
+    "signal": "send it out to members",
+    "description": "The club forwards inventory lists to interested members. Include sports, players or teams, and quantities. Use its dealer profiles to see what dealers are seeking."
+  },
+  {
+    "id": "hoophaven",
+    "name": "HoopHavenDealz · basketball collections",
+    "type": "Public collector",
+    "tags": [
+      "basketball",
+      "sports",
+      "vintage"
+    ],
+    "location": "Spanaway–Seattle, WA",
+    "url": "https://www.craigslist.org/view/d/tacoma-private-collector-looking-to/nofWsTBknJPBWH8pENzdeu",
+    "status": "Source verified",
+    "checked": "2026-11-20",
+    "browseOnly": true,
+    "description": "Public wanted post seeking older basketball collections. Posted October 25, 2026. Open the post to confirm it is still up and use its reply route. Collector identity and purchase terms are unverified."
+  }
+]

@@ -1,0 +1,9 @@
+package com.acid.camera;
+import android.content.Context;import android.graphics.*;import android.view.View;
+/** Preview-referred histogram: this is not a RAW sensor clipping meter. */
+class MeterView extends View {
+ boolean grid=false,histogram=false;String telemetry="";int[] bins=new int[64];final Paint paint=new Paint(3);float density;
+ MeterView(Context c){super(c);density=c.getResources().getDisplayMetrics().density;setImportantForAccessibility(IMPORTANT_FOR_ACCESSIBILITY_NO);}
+ void sample(Bitmap bitmap){if(bitmap==null)return;int[] pixels=new int[bitmap.getWidth()*bitmap.getHeight()];bitmap.getPixels(pixels,0,bitmap.getWidth(),0,0,bitmap.getWidth(),bitmap.getHeight());java.util.Arrays.fill(bins,0);for(int rgb:pixels){int y=(54*((rgb>>16)&255)+183*((rgb>>8)&255)+19*(rgb&255))>>8;bins[Math.min(63,y>>2)]++;}bitmap.recycle();invalidate();}
+ protected void onDraw(Canvas c){super.onDraw(c);float w=getWidth(),h=getHeight();if(grid){paint.setColor(0x55f4e4c9);paint.setStrokeWidth(density);for(int i=1;i<3;i++){c.drawLine(w*i/3,0,w*i/3,h,paint);c.drawLine(0,h*i/3,w,h*i/3,paint);}}paint.setColor(0xb3111614);c.drawRect(0,h-22*density,w,h,paint);paint.setColor(0xfff4e4c9);paint.setTextSize(9*density);paint.setTypeface(Typeface.MONOSPACE);c.drawText(telemetry,6*density,h-7*density,paint);if(histogram){float width=Math.min(w-16*density,150*density),height=48*density,left=8*density,bottom=h-30*density;paint.setColor(0xb3111614);c.drawRect(left,bottom-height-14*density,left+width,bottom,paint);paint.setColor(0xff86c9b5);int max=1;for(int b:bins)max=Math.max(max,b);for(int i=0;i<bins.length;i++)c.drawRect(left+i*width/64,bottom-height*bins[i]/max,left+(i+1)*width/64,bottom,paint);paint.setTextSize(8*density);c.drawText("PREVIEW LUMA",left+3*density,bottom-height-3*density,paint);}}
+}

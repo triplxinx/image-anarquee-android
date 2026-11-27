@@ -1,0 +1,6158 @@
+[
+  {
+    "name": "Exposure / Subtle",
+    "slots": [
+      {
+        "id": 1,
+        "enabled": true,
+        "p": [
+          0.65,
+          0.5,
+          0.25
+        ],
+        "mix": 0.35
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Exposure / Balanced",
+    "slots": [
+      {
+        "id": 1,
+        "enabled": true,
+        "p": [
+          0.65,
+          0.5,
+          0.25
+        ],
+        "mix": 0.7
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Exposure / Full",
+    "slots": [
+      {
+        "id": 1,
+        "enabled": true,
+        "p": [
+          0.65,
+          0.5,
+          0.25
+        ],
+        "mix": 1.0
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Contrast / Subtle",
+    "slots": [
+      {
+        "id": 2,
+        "enabled": true,
+        "p": [
+          0.4,
+          0.5,
+          0.25
+        ],
+        "mix": 0.35
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Contrast / Balanced",
+    "slots": [
+      {
+        "id": 2,
+        "enabled": true,
+        "p": [
+          0.4,
+          0.5,
+          0.25
+        ],
+        "mix": 0.7
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Contrast / Full",
+    "slots": [
+      {
+        "id": 2,
+        "enabled": true,
+        "p": [
+          0.4,
+          0.5,
+          0.25
+        ],
+        "mix": 1.0
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Saturation / Subtle",
+    "slots": [
+      {
+        "id": 3,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.35
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Saturation / Balanced",
+    "slots": [
+      {
+        "id": 3,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.7
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Saturation / Full",
+    "slots": [
+      {
+        "id": 3,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1.0
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Hue orbit / Subtle",
+    "slots": [
+      {
+        "id": 4,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.35
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Hue orbit / Balanced",
+    "slots": [
+      {
+        "id": 4,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.7
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Hue orbit / Full",
+    "slots": [
+      {
+        "id": 4,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1.0
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Temperature / Subtle",
+    "slots": [
+      {
+        "id": 5,
+        "enabled": true,
+        "p": [
+          0.65,
+          0.52,
+          0.25
+        ],
+        "mix": 0.35
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Temperature / Balanced",
+    "slots": [
+      {
+        "id": 5,
+        "enabled": true,
+        "p": [
+          0.65,
+          0.52,
+          0.25
+        ],
+        "mix": 0.7
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Temperature / Full",
+    "slots": [
+      {
+        "id": 5,
+        "enabled": true,
+        "p": [
+          0.65,
+          0.52,
+          0.25
+        ],
+        "mix": 1.0
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Silver monochrome / Subtle",
+    "slots": [
+      {
+        "id": 6,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.35
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Silver monochrome / Balanced",
+    "slots": [
+      {
+        "id": 6,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.7
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Silver monochrome / Full",
+    "slots": [
+      {
+        "id": 6,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1.0
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Sepia / Subtle",
+    "slots": [
+      {
+        "id": 7,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.35
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Sepia / Balanced",
+    "slots": [
+      {
+        "id": 7,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.7
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Sepia / Full",
+    "slots": [
+      {
+        "id": 7,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1.0
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Negative / Subtle",
+    "slots": [
+      {
+        "id": 8,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.35
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Negative / Balanced",
+    "slots": [
+      {
+        "id": 8,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.7
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Negative / Full",
+    "slots": [
+      {
+        "id": 8,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1.0
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Solarization / Subtle",
+    "slots": [
+      {
+        "id": 9,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.35
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Solarization / Balanced",
+    "slots": [
+      {
+        "id": 9,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.7
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Solarization / Full",
+    "slots": [
+      {
+        "id": 9,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1.0
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Posterize / Subtle",
+    "slots": [
+      {
+        "id": 10,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.35
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Posterize / Balanced",
+    "slots": [
+      {
+        "id": 10,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.7
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Posterize / Full",
+    "slots": [
+      {
+        "id": 10,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1.0
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Duotone / Subtle",
+    "slots": [
+      {
+        "id": 11,
+        "enabled": true,
+        "p": [
+          0.08,
+          0.6,
+          0.25
+        ],
+        "mix": 0.35
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Duotone / Balanced",
+    "slots": [
+      {
+        "id": 11,
+        "enabled": true,
+        "p": [
+          0.08,
+          0.6,
+          0.25
+        ],
+        "mix": 0.7
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Duotone / Full",
+    "slots": [
+      {
+        "id": 11,
+        "enabled": true,
+        "p": [
+          0.08,
+          0.6,
+          0.25
+        ],
+        "mix": 1.0
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Luma threshold / Subtle",
+    "slots": [
+      {
+        "id": 12,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.35
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Luma threshold / Balanced",
+    "slots": [
+      {
+        "id": 12,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.7
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Luma threshold / Full",
+    "slots": [
+      {
+        "id": 12,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1.0
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Vignette / Subtle",
+    "slots": [
+      {
+        "id": 13,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.35
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Vignette / Balanced",
+    "slots": [
+      {
+        "id": 13,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.7
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Vignette / Full",
+    "slots": [
+      {
+        "id": 13,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1.0
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Film grain / Subtle",
+    "slots": [
+      {
+        "id": 14,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.35
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Film grain / Balanced",
+    "slots": [
+      {
+        "id": 14,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.7
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Film grain / Full",
+    "slots": [
+      {
+        "id": 14,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1.0
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Pixel blocks / Subtle",
+    "slots": [
+      {
+        "id": 15,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.35
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Pixel blocks / Balanced",
+    "slots": [
+      {
+        "id": 15,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.7
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Pixel blocks / Full",
+    "slots": [
+      {
+        "id": 15,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1.0
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Halftone / Subtle",
+    "slots": [
+      {
+        "id": 16,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.35
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Halftone / Balanced",
+    "slots": [
+      {
+        "id": 16,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.7
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Halftone / Full",
+    "slots": [
+      {
+        "id": 16,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1.0
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Scanlines / Subtle",
+    "slots": [
+      {
+        "id": 17,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.35
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Scanlines / Balanced",
+    "slots": [
+      {
+        "id": 17,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.7
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Scanlines / Full",
+    "slots": [
+      {
+        "id": 17,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1.0
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "RGB split / Subtle",
+    "slots": [
+      {
+        "id": 18,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.35
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "RGB split / Balanced",
+    "slots": [
+      {
+        "id": 18,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.7
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "RGB split / Full",
+    "slots": [
+      {
+        "id": 18,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1.0
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Kaleidoscope / Subtle",
+    "slots": [
+      {
+        "id": 19,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.35
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Kaleidoscope / Balanced",
+    "slots": [
+      {
+        "id": 19,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.7
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Kaleidoscope / Full",
+    "slots": [
+      {
+        "id": 19,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1.0
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Mirror tiles / Subtle",
+    "slots": [
+      {
+        "id": 20,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.35
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Mirror tiles / Balanced",
+    "slots": [
+      {
+        "id": 20,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.7
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Mirror tiles / Full",
+    "slots": [
+      {
+        "id": 20,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1.0
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Swirl / Subtle",
+    "slots": [
+      {
+        "id": 21,
+        "enabled": true,
+        "p": [
+          0.75,
+          0.6,
+          0.25
+        ],
+        "mix": 0.35
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Swirl / Balanced",
+    "slots": [
+      {
+        "id": 21,
+        "enabled": true,
+        "p": [
+          0.75,
+          0.6,
+          0.25
+        ],
+        "mix": 0.7
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Swirl / Full",
+    "slots": [
+      {
+        "id": 21,
+        "enabled": true,
+        "p": [
+          0.75,
+          0.6,
+          0.25
+        ],
+        "mix": 1.0
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Water ripple / Subtle",
+    "slots": [
+      {
+        "id": 22,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.35
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Water ripple / Balanced",
+    "slots": [
+      {
+        "id": 22,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.7
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Water ripple / Full",
+    "slots": [
+      {
+        "id": 22,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1.0
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Fisheye / Subtle",
+    "slots": [
+      {
+        "id": 23,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.35
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Fisheye / Balanced",
+    "slots": [
+      {
+        "id": 23,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.7
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Fisheye / Full",
+    "slots": [
+      {
+        "id": 23,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1.0
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Pinch / Subtle",
+    "slots": [
+      {
+        "id": 24,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.35
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Pinch / Balanced",
+    "slots": [
+      {
+        "id": 24,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.7
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Pinch / Full",
+    "slots": [
+      {
+        "id": 24,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1.0
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Polar tunnel / Subtle",
+    "slots": [
+      {
+        "id": 25,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.35
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Polar tunnel / Balanced",
+    "slots": [
+      {
+        "id": 25,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.7
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Polar tunnel / Full",
+    "slots": [
+      {
+        "id": 25,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1.0
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Psychedelic melt / Subtle",
+    "slots": [
+      {
+        "id": 26,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.35
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Psychedelic melt / Balanced",
+    "slots": [
+      {
+        "id": 26,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.7
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Psychedelic melt / Full",
+    "slots": [
+      {
+        "id": 26,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1.0
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Neon edges / Subtle",
+    "slots": [
+      {
+        "id": 27,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.35
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Neon edges / Balanced",
+    "slots": [
+      {
+        "id": 27,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.7
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Neon edges / Full",
+    "slots": [
+      {
+        "id": 27,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1.0
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Pencil sketch / Subtle",
+    "slots": [
+      {
+        "id": 28,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.35
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Pencil sketch / Balanced",
+    "slots": [
+      {
+        "id": 28,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.7
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Pencil sketch / Full",
+    "slots": [
+      {
+        "id": 28,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1.0
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Emboss / Subtle",
+    "slots": [
+      {
+        "id": 29,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.35
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Emboss / Balanced",
+    "slots": [
+      {
+        "id": 29,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.7
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Emboss / Full",
+    "slots": [
+      {
+        "id": 29,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1.0
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Sharpen / Subtle",
+    "slots": [
+      {
+        "id": 30,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.35
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Sharpen / Balanced",
+    "slots": [
+      {
+        "id": 30,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.7
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Sharpen / Full",
+    "slots": [
+      {
+        "id": 30,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1.0
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Soft blur / Subtle",
+    "slots": [
+      {
+        "id": 31,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.35
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Soft blur / Balanced",
+    "slots": [
+      {
+        "id": 31,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.7
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Soft blur / Full",
+    "slots": [
+      {
+        "id": 31,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1.0
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Radial blur / Subtle",
+    "slots": [
+      {
+        "id": 32,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.35
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Radial blur / Balanced",
+    "slots": [
+      {
+        "id": 32,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.7
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Radial blur / Full",
+    "slots": [
+      {
+        "id": 32,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1.0
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Highlight bloom / Subtle",
+    "slots": [
+      {
+        "id": 33,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.35
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Highlight bloom / Balanced",
+    "slots": [
+      {
+        "id": 33,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.7
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Highlight bloom / Full",
+    "slots": [
+      {
+        "id": 33,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1.0
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Chrome foliage \u00b7 RGB mask / Subtle",
+    "slots": [
+      {
+        "id": 34,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.35
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Chrome foliage \u00b7 RGB mask / Balanced",
+    "slots": [
+      {
+        "id": 34,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.7
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Chrome foliage \u00b7 RGB mask / Full",
+    "slots": [
+      {
+        "id": 34,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1.0
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Infrared look \u00b7 SIMULATED / Subtle",
+    "slots": [
+      {
+        "id": 35,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.35
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Infrared look \u00b7 SIMULATED / Balanced",
+    "slots": [
+      {
+        "id": 35,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.7
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Infrared look \u00b7 SIMULATED / Full",
+    "slots": [
+      {
+        "id": 35,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1.0
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Thermal palette \u00b7 SIMULATED / Subtle",
+    "slots": [
+      {
+        "id": 36,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.35
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Thermal palette \u00b7 SIMULATED / Balanced",
+    "slots": [
+      {
+        "id": 36,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.7
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Thermal palette \u00b7 SIMULATED / Full",
+    "slots": [
+      {
+        "id": 36,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1.0
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Gradient map / Subtle",
+    "slots": [
+      {
+        "id": 37,
+        "enabled": true,
+        "p": [
+          0.08,
+          0.6,
+          0.25
+        ],
+        "mix": 0.35
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Gradient map / Balanced",
+    "slots": [
+      {
+        "id": 37,
+        "enabled": true,
+        "p": [
+          0.08,
+          0.6,
+          0.25
+        ],
+        "mix": 0.7
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Gradient map / Full",
+    "slots": [
+      {
+        "id": 37,
+        "enabled": true,
+        "p": [
+          0.08,
+          0.6,
+          0.25
+        ],
+        "mix": 1.0
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Comic ink / Subtle",
+    "slots": [
+      {
+        "id": 38,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.35
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Comic ink / Balanced",
+    "slots": [
+      {
+        "id": 38,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.7
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Comic ink / Full",
+    "slots": [
+      {
+        "id": 38,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1.0
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Crosshatch / Subtle",
+    "slots": [
+      {
+        "id": 39,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.35
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Crosshatch / Balanced",
+    "slots": [
+      {
+        "id": 39,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.7
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Crosshatch / Full",
+    "slots": [
+      {
+        "id": 39,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1.0
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Dot screen / Subtle",
+    "slots": [
+      {
+        "id": 40,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.35
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Dot screen / Balanced",
+    "slots": [
+      {
+        "id": 40,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.7
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Dot screen / Full",
+    "slots": [
+      {
+        "id": 40,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1.0
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Glyph mosaic / Subtle",
+    "slots": [
+      {
+        "id": 41,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.35
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Glyph mosaic / Balanced",
+    "slots": [
+      {
+        "id": 41,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.7
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Glyph mosaic / Full",
+    "slots": [
+      {
+        "id": 41,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1.0
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Glitch bands / Subtle",
+    "slots": [
+      {
+        "id": 42,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.35
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Glitch bands / Balanced",
+    "slots": [
+      {
+        "id": 42,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.7
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Glitch bands / Full",
+    "slots": [
+      {
+        "id": 42,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1.0
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "CRT bend / Subtle",
+    "slots": [
+      {
+        "id": 43,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.35
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "CRT bend / Balanced",
+    "slots": [
+      {
+        "id": 43,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.7
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "CRT bend / Full",
+    "slots": [
+      {
+        "id": 43,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1.0
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Micro stars / Subtle",
+    "slots": [
+      {
+        "id": 44,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.35
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Micro stars / Balanced",
+    "slots": [
+      {
+        "id": 44,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.7
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Micro stars / Full",
+    "slots": [
+      {
+        "id": 44,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1.0
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Micro hearts / Subtle",
+    "slots": [
+      {
+        "id": 45,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.35
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Micro hearts / Balanced",
+    "slots": [
+      {
+        "id": 45,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.7
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Micro hearts / Full",
+    "slots": [
+      {
+        "id": 45,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1.0
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Checker fill / Subtle",
+    "slots": [
+      {
+        "id": 46,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.35
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Checker fill / Balanced",
+    "slots": [
+      {
+        "id": 46,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.7
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Checker fill / Full",
+    "slots": [
+      {
+        "id": 46,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1.0
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Rainbow contours / Subtle",
+    "slots": [
+      {
+        "id": 47,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.35
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Rainbow contours / Balanced",
+    "slots": [
+      {
+        "id": 47,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.7
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Rainbow contours / Full",
+    "slots": [
+      {
+        "id": 47,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1.0
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Luma relief / Subtle",
+    "slots": [
+      {
+        "id": 48,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.35
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Luma relief / Balanced",
+    "slots": [
+      {
+        "id": 48,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.7
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Luma relief / Full",
+    "slots": [
+      {
+        "id": 48,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1.0
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Acid negative / Subtle",
+    "slots": [
+      {
+        "id": 49,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.35
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Acid negative / Balanced",
+    "slots": [
+      {
+        "id": 49,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.7
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Acid negative / Full",
+    "slots": [
+      {
+        "id": 49,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1.0
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Motion difference / Subtle",
+    "slots": [
+      {
+        "id": 50,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.35
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Motion difference / Balanced",
+    "slots": [
+      {
+        "id": 50,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.7
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Motion difference / Full",
+    "slots": [
+      {
+        "id": 50,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1.0
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Echo trails / Subtle",
+    "slots": [
+      {
+        "id": 51,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.35
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Echo trails / Balanced",
+    "slots": [
+      {
+        "id": 51,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.7
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Echo trails / Full",
+    "slots": [
+      {
+        "id": 51,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1.0
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Light painting / Subtle",
+    "slots": [
+      {
+        "id": 52,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.35
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Light painting / Balanced",
+    "slots": [
+      {
+        "id": 52,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.7
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Light painting / Full",
+    "slots": [
+      {
+        "id": 52,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1.0
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Motion color trails / Subtle",
+    "slots": [
+      {
+        "id": 53,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.35
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Motion color trails / Balanced",
+    "slots": [
+      {
+        "id": 53,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.7
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "Motion color trails / Full",
+    "slots": [
+      {
+        "id": 53,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1.0
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 0,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      }
+    ],
+    "schema": 1
+  },
+  {
+    "name": "STACK / Acid Cathedral",
+    "schema": 1,
+    "slots": [
+      {
+        "id": 19,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 26,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.75
+      },
+      {
+        "id": 49,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.75
+      }
+    ]
+  },
+  {
+    "name": "STACK / Paper Witness",
+    "schema": 1,
+    "slots": [
+      {
+        "id": 6,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 28,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.75
+      },
+      {
+        "id": 14,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.75
+      }
+    ]
+  },
+  {
+    "name": "STACK / Neon Transmission",
+    "schema": 1,
+    "slots": [
+      {
+        "id": 27,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 18,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.75
+      },
+      {
+        "id": 17,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.75
+      }
+    ]
+  },
+  {
+    "name": "STACK / Silver Garden \u00b7 RGB simulation",
+    "schema": 1,
+    "slots": [
+      {
+        "id": 34,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 13,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.75
+      },
+      {
+        "id": 14,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.75
+      }
+    ]
+  },
+  {
+    "name": "STACK / Synthetic NIR \u00b7 RGB simulation",
+    "schema": 1,
+    "slots": [
+      {
+        "id": 35,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 10,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.75
+      },
+      {
+        "id": 13,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.75
+      }
+    ]
+  },
+  {
+    "name": "STACK / False Heat Surveillance \u00b7 RGB simulation",
+    "schema": 1,
+    "slots": [
+      {
+        "id": 36,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 17,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.75
+      },
+      {
+        "id": 42,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.75
+      }
+    ]
+  },
+  {
+    "name": "STACK / Motion Ghost",
+    "schema": 1,
+    "slots": [
+      {
+        "id": 51,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 4,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.75
+      },
+      {
+        "id": 18,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.75
+      }
+    ]
+  },
+  {
+    "name": "STACK / Light Ribbons",
+    "schema": 1,
+    "slots": [
+      {
+        "id": 52,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 47,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.75
+      },
+      {
+        "id": 33,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.75
+      }
+    ]
+  },
+  {
+    "name": "STACK / Comic Riot",
+    "schema": 1,
+    "slots": [
+      {
+        "id": 38,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 10,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.75
+      },
+      {
+        "id": 14,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.75
+      }
+    ]
+  },
+  {
+    "name": "STACK / CRT Relic",
+    "schema": 1,
+    "slots": [
+      {
+        "id": 7,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 43,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.75
+      },
+      {
+        "id": 14,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.75
+      }
+    ]
+  },
+  {
+    "name": "STACK / Heart Screen",
+    "schema": 1,
+    "slots": [
+      {
+        "id": 45,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 11,
+        "enabled": true,
+        "p": [
+          0.08,
+          0.6,
+          0.25
+        ],
+        "mix": 0.75
+      },
+      {
+        "id": 13,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.75
+      }
+    ]
+  },
+  {
+    "name": "STACK / Starfall Melt",
+    "schema": 1,
+    "slots": [
+      {
+        "id": 26,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 1
+      },
+      {
+        "id": 44,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.75
+      },
+      {
+        "id": 4,
+        "enabled": true,
+        "p": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "mix": 0.75
+      }
+    ]
+  }
+]
