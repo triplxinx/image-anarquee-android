@@ -75,6 +75,9 @@ public final class MainActivity extends Activity {
         assets.put("/studio-render.js", "text/javascript");
         assets.put("/studio.js", "text/javascript");
         assets.put("/wide-net.js", "text/javascript");
+        assets.put("/wide-sources.js", "text/javascript");
+        assets.put("/wide-tools.js", "text/javascript");
+        assets.put("/wide-net-feeds.json", "application/json");
         ASSETS = Collections.unmodifiableMap(assets);
     }
 
@@ -131,6 +134,8 @@ public final class MainActivity extends Activity {
             && uri.getPort() == -1 && ASSETS.containsKey(uri.getPath());
     }
 
+    private final WideFeed wideFeed = new WideFeed();
+
     private final class DashboardClient extends WebViewClient {
         @Override public WebResourceResponse shouldInterceptRequest(WebView view, WebResourceRequest request) {
             Uri uri = request.getUrl();
@@ -141,6 +146,10 @@ public final class MainActivity extends Activity {
                 } catch (IOException ignored) {}
             }
             String path = uri.getPath();
+            if ("https".equals(uri.getScheme()) && HOST.equals(uri.getHost()) && uri.getPort()==-1
+                && "/wide-feed.php".equals(path) && "GET".equals(request.getMethod()) && !request.isForMainFrame()) {
+                return wideFeed.respond(getAssets(), uri);
+            }
             if ("https".equals(uri.getScheme()) && HOST.equals(uri.getHost()) && uri.getPort()==-1
                 && path != null && path.startsWith("/card-image/")) {
                 String name=path.substring("/card-image/".length());

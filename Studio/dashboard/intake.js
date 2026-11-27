@@ -12,11 +12,13 @@ window.ArchiveIntake = (() => {
   const panel = () => document.querySelector('#photo-intake');
   function init() {
     if (!database) database = new Promise((resolve, reject) => {
-      const request = indexedDB.open('archive-launch-desk-media', 1);
+      const request = indexedDB.open('archive-launch-desk-media', 2);
       request.onupgradeneeded = () => {
         const db = request.result;
-        const store = db.createObjectStore('images', {keyPath:'hash'});
-        store.createIndex('created','created');
+        const store = db.objectStoreNames.contains('images') ? request.transaction.objectStore('images')
+          : db.createObjectStore('images', {keyPath:'hash'});
+        if (!store.indexNames.contains('created')) store.createIndex('created','created');
+        if (!store.indexNames.contains('wideEnabled')) store.createIndex('wideEnabled','wideEnabled');
       };
       request.onsuccess = () => resolve(request.result);
       request.onerror = () => reject(request.error);
@@ -50,13 +52,68 @@ window.ArchiveIntake = (() => {
       cursor.onerror = () => reject(cursor.error);
     });
   }
+  async function openForStudio(hash) {
+    const record=await request('readonly',store=>store.get(hash));
+    const blob=record?.edited||record?.original;
+    if (!blob) throw Error('The original or edited file is unavailable.');
+    return window.ArchiveStudio.useMedia(blob,record.name);
+  }
   async function composePhoto(hash) {
+    try {await openForStudio(hash);}
+    catch (error) {displayProgress(error.message||'The saved image could not be opened.');}
+  }
+  async function wideAssets() {
+    const db=await init();
+    return new Promise((resolve,reject)=>{
+      const rows=[], tx=db.transaction('images');
+      const cursor=tx.objectStore('images').index('wideEnabled').openCursor(IDBKeyRange.only(1));
+      cursor.onsuccess=()=>{
+        const item=cursor.result;
+        if(!item){resolve(rows);return;}
+        const {hash,name,album,original,edited,wide}=item.value;
+        if(wide)rows.push({hash,name,album,hasMedia:Boolean(original||edited),...wide});
+        item.continue();
+      };
+      cursor.onerror=()=>reject(cursor.error);
+      tx.onabort=()=>reject(tx.error);
+    });
+  }
+  async function wideEdit(hash) {
+    const dialog=panel()?.querySelector('[data-photo-wide-dialog]');
+    if(!dialog || dialog.open)return;
     try {
       const record=await request('readonly',store=>store.get(hash));
-      const blob=record?.edited||record?.original;
-      if (!blob) throw Error('The original or edited file is unavailable.');
-      await window.ArchiveStudio.useMedia(blob,record.name);
-    } catch (error) { displayProgress(error.message||'The saved image could not be opened.'); }
+      if(!record || !dialog.isConnected)return;
+      const form=dialog.querySelector('form');
+      form.reset();
+      dialog.querySelector('h3').textContent='Wide Net tags for '+record.name;
+      form.elements.enabled.checked=record.wideEnabled===1;
+      for(const key of ['subjects','styles','lane','rights','rightsUntil','rightsNotes'])
+        form.elements[key].value=record.wide?.[key]||'';
+      form.onsubmit=async event=>{
+        event.preventDefault();
+        const button=form.querySelector('[type=submit]');
+        button.disabled=true;
+        try {
+          const data=new FormData(form);
+          const wide=Object.fromEntries(['subjects','styles','lane','rights','rightsUntil','rightsNotes'].map(k=>[k,String(data.get(k)||'').trim()]));
+          const db=await init();
+          await new Promise((resolve,reject)=>{
+            const tx=db.transaction('images','readwrite'), store=tx.objectStore('images');
+            const get=store.get(hash);
+            get.onsuccess=()=>{if(get.result)store.put({...get.result,wide,wideEnabled:data.has('enabled')?1:0});else tx.abort();};
+            tx.oncomplete=resolve;
+            tx.onabort=()=>reject(tx.error);
+          });
+          dialog.close();
+          await render();
+          displayProgress('Wide Net tags saved.');
+        } catch {form.querySelector('[data-photo-wide-status]').textContent='Unable to save asset tags.';}
+        finally {button.disabled=false;}
+      };
+      form.querySelector('[data-photo-wide-status]').textContent='';
+      dialog.showModal();
+    } catch {displayProgress('Unable to open asset tags.');}
   }
   function clearURLs(){for(const url of imageURLs)URL.revokeObjectURL(url);imageURLs=[];}
   function displayProgress(message) {
@@ -85,7 +142,7 @@ window.ArchiveIntake = (() => {
         const url = r.thumbnail?URL.createObjectURL(r.thumbnail):'';
         if(url)imageURLs.push(url);
         return '<figure class="photo-record">'+(url?'<img src="'+url+'" alt="" loading="lazy">':'<div class="photo-placeholder">Preview unavailable</div>')+
-          '<figcaption><strong>'+clean(r.name)+'</strong><small>'+clean(r.album)+(r.width?' · '+r.width+' × '+r.height:'')+'</small>'+(r.hasOriginal?'<button class="quiet" type="button" data-photo-original="'+clean(r.hash)+'">Save original</button>':'')+(r.hasEdit?'<button class="quiet" type="button" data-photo-edit-save="'+clean(r.hash)+'">Save edited image</button>':'')+((r.hasOriginal||r.hasEdit)?'<button class="quiet" type="button" data-photo-studio="'+clean(r.hash)+'">Compose in Studio</button>':'')+'</figcaption></figure>';
+          '<figcaption><strong>'+clean(r.name)+'</strong><small>'+clean(r.album)+(r.width?' · '+r.width+' × '+r.height:'')+'</small>'+(r.hasOriginal?'<button class="quiet" type="button" data-photo-original="'+clean(r.hash)+'">Save original</button>':'')+(r.hasEdit?'<button class="quiet" type="button" data-photo-edit-save="'+clean(r.hash)+'">Save edited image</button>':'')+((r.hasOriginal||r.hasEdit)?'<button class="quiet" type="button" data-photo-studio="'+clean(r.hash)+'">Compose in Studio</button>':'')+'<button class="quiet" type="button" data-photo-wide="'+clean(r.hash)+'">'+(r.wideEnabled===1?'Edit Wide Net tags':'Tag for Wide Net')+'</button></figcaption></figure>';
       }).join('');
       node.querySelector('[data-photo-previous]').disabled = offset===0;
       node.querySelector('[data-photo-next]').disabled = offset+pageSize>=total;
@@ -250,6 +307,10 @@ window.ArchiveIntake = (() => {
       event.target.value='';renderQueue();displayProgress(queued());
     });
     root.addEventListener('click',event=>{
+      const cancel=event.target.closest('[data-photo-wide-cancel]');
+      if(cancel)cancel.closest('dialog').close();
+      const tag=event.target.closest('[data-photo-wide]');
+      if(tag)void wideEdit(tag.dataset.photoWide);
       const compose=event.target.closest('[data-photo-studio]');
       if(compose)void composePhoto(compose.dataset.photoStudio);
       const original=event.target.closest('[data-photo-original]');
@@ -265,7 +326,7 @@ window.ArchiveIntake = (() => {
     });
     unsubscribeView=true;
   }
-  return {mount,bind,markup: `
+  return {mount,bind,wideAssets,openForStudio,markup: `
     <section class="card photo-intake" id="photo-intake">
       <div class="spread"><div><p class="kicker">Image catalog</p><h2>Import photos</h2></div><span class="badge">50 per batch</span></div>
       <p>Choose the images you want to catalog. Imports are private to this browser or Android app. A thumbnail and file details are saved for each unique image.</p>
@@ -290,5 +351,18 @@ window.ArchiveIntake = (() => {
       </dialog>
       <div class="spread"><h3 data-photo-count>Loading catalog…</h3><div class="row"><button class="quiet" data-photo-previous>Previous</button><button class="quiet" data-photo-next>Next</button></div></div>
       <div class="photo-grid" data-photo-gallery></div>
+      <dialog data-photo-wide-dialog aria-label="Wide Net asset metadata"><h3>Wide Net asset metadata</h3>
+        <form class="formgrid">
+          <label class="wide"><input type="checkbox" name="enabled"> Include this image in Wide Net matching</label>
+          <label class="field">Subjects and causes, comma separated<input name="subjects" maxlength="500"></label>
+          <label class="field">Visual styles, comma separated<input name="styles" maxlength="500"></label>
+          <label class="field">Medium<select name="lane"><option value="">Any / unspecified</option><option value="licensing">Photography</option><option value="design">Illustration and design</option><option value="video">Film and motion</option><option value="copy">Editorial</option><option value="landing">Web and exhibitions</option></select></label>
+          <label class="field">Rights for pitches<select name="rights"><option value="">Review needed</option><option value="cleared">I can use this work in pitches</option><option value="restricted">Restricted</option></select></label>
+          <label class="field">Clearance expires, if applicable<input name="rightsUntil" type="date"></label>
+          <label class="field">Scope or rights notes<input name="rightsNotes" maxlength="500"></label>
+          <div class="row wide"><button class="primary" type="submit">Save tags</button><button class="quiet" type="button" data-photo-wide-cancel>Cancel</button></div>
+          <p class="small wide" role="status" data-photo-wide-status></p>
+        </form>
+      </dialog>
     </section>`};
 })();

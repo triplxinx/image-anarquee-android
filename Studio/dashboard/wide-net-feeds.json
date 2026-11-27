@@ -1,0 +1,8 @@
+{
+  "uk-tender": {"name":"UK Find a Tender","url":"https://www.find-tender.service.gov.uk/api/1.0/ocdsReleasePackages?limit=60&stages=tender","region":"uk","language":"en","format":"ocds","cursor":true},
+  "fww": {"name":"Freedom With Writing","url":"https://www.freedomwithwriting.com/freedom/feed/","region":"global","language":"en","format":"rss"},
+  "4culture": {"name":"4Culture","url":"https://www.4culture.org/category/grant-categories/artist-calls/","region":"pnw","language":"en","format":"4culture"},
+  "artquest": {"name":"Artquest","url":"https://artquest.org.uk/opportunities/","region":"uk","language":"en","format":"artquest"},
+  "acf": {"name":"African Culture Fund","url":"https://www.africanculturefund.net/feed/","region":"africa","language":"fr","format":"rss"},
+  "culture360": {"name":"ASEF culture360","url":"https://culture360.asef.org/opportunities/","region":"global","language":"en","format":"culture360"}
+}
