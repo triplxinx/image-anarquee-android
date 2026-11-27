@@ -1,13 +1,7 @@
-# image-anarquee-android
+# iMAG3 Anarqeə! Studio × XXX!NK
 
-Native Kotlin Android workbench for portfolio, leads, pitches, card scanning and affiliate workflows.
+iMAG3 Studio combines creative scouting, the portfolio and Workdesk, authoring, private licensing previews and an Android phone host. XXX!NK is the companion PHP archive and licensing site.
 
-Status: independently prepared starter scaffold, not a production release. Original source assets, credentials and unpublished manuscripts are not included.
+Run `bash Studio/assemble.sh` to assemble the Android source and deployable PHP website from this checkout. Both use the same checked-in dashboard. The [Studio guide](Studio/README.md) covers the source layout and Wide Net. The [Android guide](Studio/ANDROID.md) covers signing and data migration, and the [IONOS guide](Studio/web/IONOS-SETUP.md) covers deployment.
 
-No open-source license has been granted. See docs/ROADMAP.md for remaining implementation work.
-
-## Project documentation
-- [About, complete accessible feature-request inventory, iteration history and prioritized TODO](docs/PROJECT_HISTORY_AND_REQUIREMENTS.md)
-- [Verified repository revision history](CHANGELOG.md)
-
-The requirements register records requests, not proof of implementation. See its verification section before treating a feature as available.
+The [requirements register](docs/PROJECT_HISTORY_AND_REQUIREMENTS.md) records earlier requests and the scope of the original scaffold. [Release history](CHANGELOG.md) records how those iterations became Studio.

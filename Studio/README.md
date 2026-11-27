@@ -1,5 +1,9 @@
 # iMAG3 Studio and XXX!NK
-Run `bash Studio/assemble.sh` from the repository to assemble the Android source and the deployable PHP website into a new `studio-build` folder. The checked-in Next archive supplies the original dependencies and assets. The editable Studio overlay supplies the updates, and the assembly command shares the same web dashboard between Android and the PHP site. See `studio-build/android-source/README.md` and `studio-build/web/RELEASE.md` for signing, testing and deployment.
+`Studio/android/` is the Android app, `Studio/dashboard/` is the dashboard shared by Android and the browser, and `Studio/web/` is the XXX!NK PHP site. Change the dashboard here once and assemble both deliverables from the same commit.
+
+Run `bash Studio/assemble.sh` to create `studio-build/android-source/` and `studio-build/web/`. Pass a new directory path as an argument for another build. The script checks the historical Next archive's checksum and extracts only the bundled brand media, OCR dependencies, NanoHTTPD and the raster color profile. The tracked Studio directories supply the application code. See [Android build and signing](ANDROID.md) and [web deployment](web/IONOS-SETUP.md). Generated output belongs outside source control.
+
+The earlier native scaffold and Phone Host Next build are available in Git history. Studio includes Phone Host Next's host, scanner and workdesk, plus the authoring and Wide Net work. Remotive is available as a source link in Wide Net. Its earlier polling implementation was retired with the scaffold.
 
 ## Wide Net
 

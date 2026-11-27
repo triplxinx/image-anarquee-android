@@ -1,0 +1,49 @@
+name: Build iMAG3 Studio
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Assemble Android and PHP sources
+        run: bash Studio/assemble.sh
+      - name: Check shared dashboard and PHP sources
+        run: |
+          diff -qr studio-build/android-source/dist studio-build/web/xxxznx/public/studio
+          find Studio/dashboard -maxdepth 1 -name '*.js' -print0 | xargs -0 -r -n 1 node --check
+          find studio-build/web -name '*.php' -print0 | xargs -0 -r -n 1 php -l
+      - name: Install Android platform and build tools
+        run: sdkmanager 'platforms;android-35' 'build-tools;35.0.0'
+      - name: Compile and verify a CI APK
+        env:
+          ARCHIVE_KEYSTORE: ${{ runner.temp }}/studio-ci.p12
+          ARCHIVE_KEY_ALIAS: studio-ci
+          ARCHIVE_KEY_PASSWORD: studio-ci-ephemeral
+          ARCHIVE_APPLICATION_ID: studio.ellis.archivedesk.authoring.ci
+        run: |
+          keytool -genkeypair -noprompt -alias "$ARCHIVE_KEY_ALIAS" -keystore "$ARCHIVE_KEYSTORE" \
+            -storepass "$ARCHIVE_KEY_PASSWORD" -keyalg RSA -keysize 2048 -validity 2 -dname 'CN=iMAG3 CI'
+          bash studio-build/android-source/android/build.sh "$RUNNER_TEMP/iMAG3-Studio-CI.apk"
+          "$ANDROID_SDK_ROOT/build-tools/35.0.0/aapt" dump badging "$RUNNER_TEMP/iMAG3-Studio-CI.apk" |
+            grep -F "package: name='$ARCHIVE_APPLICATION_ID'"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Studio-XXXINK-Webspace
+          path: studio-build/web/
+          include-hidden-files: true
+          if-no-files-found: error

@@ -1,0 +1,3134 @@
+[
+  {
+    "id": 0,
+    "name": "Bypass",
+    "category": "Utility",
+    "parameters": [
+      "Reserved",
+      "Reserved",
+      "Reserved"
+    ],
+    "defaults": [
+      0.5,
+      0.5,
+      0.25
+    ],
+    "mix": 1.0,
+    "temporal": false,
+    "license": "MIT",
+    "implementation": "Original ACID shader; not imported from third-party libraries",
+    "description": "Processes visible camera imagery. Three-slot stack compatible; order changes the result.",
+    "parameterSchema": [
+      {
+        "index": 0,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": false
+      },
+      {
+        "index": 1,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": false
+      },
+      {
+        "index": 2,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.25,
+        "used": false
+      }
+    ],
+    "requiredInput": "RGB frame",
+    "sensorMeasurement": false,
+    "mixRange": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": 1,
+    "name": "Exposure",
+    "category": "Color",
+    "parameters": [
+      "Exposure \u22122 to +2 EV",
+      "Reserved",
+      "Reserved"
+    ],
+    "defaults": [
+      0.65,
+      0.5,
+      0.25
+    ],
+    "mix": 1.0,
+    "temporal": false,
+    "license": "MIT",
+    "implementation": "Original ACID shader; not imported from third-party libraries",
+    "description": "Processes visible camera imagery. Three-slot stack compatible; order changes the result.",
+    "parameterSchema": [
+      {
+        "index": 0,
+        "label": "Exposure \u22122 to +2 EV",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.65,
+        "used": true
+      },
+      {
+        "index": 1,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": false
+      },
+      {
+        "index": 2,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.25,
+        "used": false
+      }
+    ],
+    "requiredInput": "RGB frame",
+    "sensorMeasurement": false,
+    "mixRange": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Contrast",
+    "category": "Color",
+    "parameters": [
+      "Contrast 0.5 to 2.5",
+      "Pivot 0.2 to 0.8",
+      "Reserved"
+    ],
+    "defaults": [
+      0.4,
+      0.5,
+      0.25
+    ],
+    "mix": 1.0,
+    "temporal": false,
+    "license": "MIT",
+    "implementation": "Original ACID shader; not imported from third-party libraries",
+    "description": "Processes visible camera imagery. Three-slot stack compatible; order changes the result.",
+    "parameterSchema": [
+      {
+        "index": 0,
+        "label": "Contrast 0.5 to 2.5",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.4,
+        "used": true
+      },
+      {
+        "index": 1,
+        "label": "Pivot 0.2 to 0.8",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 2,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.25,
+        "used": false
+      }
+    ],
+    "requiredInput": "RGB frame",
+    "sensorMeasurement": false,
+    "mixRange": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Saturation",
+    "category": "Color",
+    "parameters": [
+      "Saturation 0 to 3",
+      "Reserved",
+      "Reserved"
+    ],
+    "defaults": [
+      0.5,
+      0.5,
+      0.25
+    ],
+    "mix": 1.0,
+    "temporal": false,
+    "license": "MIT",
+    "implementation": "Original ACID shader; not imported from third-party libraries",
+    "description": "Processes visible camera imagery. Three-slot stack compatible; order changes the result.",
+    "parameterSchema": [
+      {
+        "index": 0,
+        "label": "Saturation 0 to 3",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 1,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": false
+      },
+      {
+        "index": 2,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.25,
+        "used": false
+      }
+    ],
+    "requiredInput": "RGB frame",
+    "sensorMeasurement": false,
+    "mixRange": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Hue orbit",
+    "category": "Color",
+    "parameters": [
+      "Hue angle",
+      "Reserved",
+      "Animation speed"
+    ],
+    "defaults": [
+      0.5,
+      0.5,
+      0.25
+    ],
+    "mix": 1.0,
+    "temporal": false,
+    "license": "MIT",
+    "implementation": "Original ACID shader; not imported from third-party libraries",
+    "description": "Processes visible camera imagery. Three-slot stack compatible; order changes the result.",
+    "parameterSchema": [
+      {
+        "index": 0,
+        "label": "Hue angle",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 1,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": false
+      },
+      {
+        "index": 2,
+        "label": "Animation speed",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.25,
+        "used": true
+      }
+    ],
+    "requiredInput": "RGB frame",
+    "sensorMeasurement": false,
+    "mixRange": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Temperature",
+    "category": "Color",
+    "parameters": [
+      "Warm / cool",
+      "Green / magenta",
+      "Reserved"
+    ],
+    "defaults": [
+      0.65,
+      0.52,
+      0.25
+    ],
+    "mix": 1.0,
+    "temporal": false,
+    "license": "MIT",
+    "implementation": "Original ACID shader; not imported from third-party libraries",
+    "description": "Processes visible camera imagery. Three-slot stack compatible; order changes the result.",
+    "parameterSchema": [
+      {
+        "index": 0,
+        "label": "Warm / cool",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.65,
+        "used": true
+      },
+      {
+        "index": 1,
+        "label": "Green / magenta",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.52,
+        "used": true
+      },
+      {
+        "index": 2,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.25,
+        "used": false
+      }
+    ],
+    "requiredInput": "RGB frame",
+    "sensorMeasurement": false,
+    "mixRange": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Silver monochrome",
+    "category": "Color",
+    "parameters": [
+      "Red channel weighting",
+      "Contrast",
+      "Reserved"
+    ],
+    "defaults": [
+      0.5,
+      0.5,
+      0.25
+    ],
+    "mix": 1.0,
+    "temporal": false,
+    "license": "MIT",
+    "implementation": "Original ACID shader; not imported from third-party libraries",
+    "description": "Processes visible camera imagery. Three-slot stack compatible; order changes the result.",
+    "parameterSchema": [
+      {
+        "index": 0,
+        "label": "Red channel weighting",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 1,
+        "label": "Contrast",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 2,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.25,
+        "used": false
+      }
+    ],
+    "requiredInput": "RGB frame",
+    "sensorMeasurement": false,
+    "mixRange": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Sepia",
+    "category": "Color",
+    "parameters": [
+      "Sepia warmth",
+      "Reserved",
+      "Reserved"
+    ],
+    "defaults": [
+      0.5,
+      0.5,
+      0.25
+    ],
+    "mix": 1.0,
+    "temporal": false,
+    "license": "MIT",
+    "implementation": "Original ACID shader; not imported from third-party libraries",
+    "description": "Processes visible camera imagery. Three-slot stack compatible; order changes the result.",
+    "parameterSchema": [
+      {
+        "index": 0,
+        "label": "Sepia warmth",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 1,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": false
+      },
+      {
+        "index": 2,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.25,
+        "used": false
+      }
+    ],
+    "requiredInput": "RGB frame",
+    "sensorMeasurement": false,
+    "mixRange": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Negative",
+    "category": "Color",
+    "parameters": [
+      "Reserved",
+      "Reserved",
+      "Reserved"
+    ],
+    "defaults": [
+      0.5,
+      0.5,
+      0.25
+    ],
+    "mix": 1.0,
+    "temporal": false,
+    "license": "MIT",
+    "implementation": "Original ACID shader; not imported from third-party libraries",
+    "description": "Processes visible camera imagery. Three-slot stack compatible; order changes the result.",
+    "parameterSchema": [
+      {
+        "index": 0,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": false
+      },
+      {
+        "index": 1,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": false
+      },
+      {
+        "index": 2,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.25,
+        "used": false
+      }
+    ],
+    "requiredInput": "RGB frame",
+    "sensorMeasurement": false,
+    "mixRange": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Solarization",
+    "category": "Color",
+    "parameters": [
+      "Threshold",
+      "Reserved",
+      "Reserved"
+    ],
+    "defaults": [
+      0.5,
+      0.5,
+      0.25
+    ],
+    "mix": 1.0,
+    "temporal": false,
+    "license": "MIT",
+    "implementation": "Original ACID shader; not imported from third-party libraries",
+    "description": "Processes visible camera imagery. Three-slot stack compatible; order changes the result.",
+    "parameterSchema": [
+      {
+        "index": 0,
+        "label": "Threshold",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 1,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": false
+      },
+      {
+        "index": 2,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.25,
+        "used": false
+      }
+    ],
+    "requiredInput": "RGB frame",
+    "sensorMeasurement": false,
+    "mixRange": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Posterize",
+    "category": "Color",
+    "parameters": [
+      "Color levels 2 to 16",
+      "Reserved",
+      "Reserved"
+    ],
+    "defaults": [
+      0.5,
+      0.5,
+      0.25
+    ],
+    "mix": 1.0,
+    "temporal": false,
+    "license": "MIT",
+    "implementation": "Original ACID shader; not imported from third-party libraries",
+    "description": "Processes visible camera imagery. Three-slot stack compatible; order changes the result.",
+    "parameterSchema": [
+      {
+        "index": 0,
+        "label": "Color levels 2 to 16",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 1,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": false
+      },
+      {
+        "index": 2,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.25,
+        "used": false
+      }
+    ],
+    "requiredInput": "RGB frame",
+    "sensorMeasurement": false,
+    "mixRange": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Duotone",
+    "category": "Color",
+    "parameters": [
+      "Shadow hue",
+      "Highlight hue",
+      "Reserved"
+    ],
+    "defaults": [
+      0.08,
+      0.6,
+      0.25
+    ],
+    "mix": 1.0,
+    "temporal": false,
+    "license": "MIT",
+    "implementation": "Original ACID shader; not imported from third-party libraries",
+    "description": "Processes visible camera imagery. Three-slot stack compatible; order changes the result.",
+    "parameterSchema": [
+      {
+        "index": 0,
+        "label": "Shadow hue",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.08,
+        "used": true
+      },
+      {
+        "index": 1,
+        "label": "Highlight hue",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.6,
+        "used": true
+      },
+      {
+        "index": 2,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.25,
+        "used": false
+      }
+    ],
+    "requiredInput": "RGB frame",
+    "sensorMeasurement": false,
+    "mixRange": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Luma threshold",
+    "category": "Color",
+    "parameters": [
+      "Threshold",
+      "Softness",
+      "Reserved"
+    ],
+    "defaults": [
+      0.5,
+      0.5,
+      0.25
+    ],
+    "mix": 1.0,
+    "temporal": false,
+    "license": "MIT",
+    "implementation": "Original ACID shader; not imported from third-party libraries",
+    "description": "Processes visible camera imagery. Three-slot stack compatible; order changes the result.",
+    "parameterSchema": [
+      {
+        "index": 0,
+        "label": "Threshold",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 1,
+        "label": "Softness",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 2,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.25,
+        "used": false
+      }
+    ],
+    "requiredInput": "RGB frame",
+    "sensorMeasurement": false,
+    "mixRange": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Vignette",
+    "category": "Texture",
+    "parameters": [
+      "Falloff",
+      "Radius",
+      "Reserved"
+    ],
+    "defaults": [
+      0.5,
+      0.5,
+      0.25
+    ],
+    "mix": 1.0,
+    "temporal": false,
+    "license": "MIT",
+    "implementation": "Original ACID shader; not imported from third-party libraries",
+    "description": "Processes visible camera imagery. Three-slot stack compatible; order changes the result.",
+    "parameterSchema": [
+      {
+        "index": 0,
+        "label": "Falloff",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 1,
+        "label": "Radius",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 2,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.25,
+        "used": false
+      }
+    ],
+    "requiredInput": "RGB frame",
+    "sensorMeasurement": false,
+    "mixRange": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Film grain",
+    "category": "Texture",
+    "parameters": [
+      "Grain amount",
+      "Grain size",
+      "Animation speed"
+    ],
+    "defaults": [
+      0.5,
+      0.5,
+      0.25
+    ],
+    "mix": 1.0,
+    "temporal": false,
+    "license": "MIT",
+    "implementation": "Original ACID shader; not imported from third-party libraries",
+    "description": "Processes visible camera imagery. Three-slot stack compatible; order changes the result.",
+    "parameterSchema": [
+      {
+        "index": 0,
+        "label": "Grain amount",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 1,
+        "label": "Grain size",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 2,
+        "label": "Animation speed",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.25,
+        "used": true
+      }
+    ],
+    "requiredInput": "RGB frame",
+    "sensorMeasurement": false,
+    "mixRange": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Pixel blocks",
+    "category": "Texture",
+    "parameters": [
+      "Block size",
+      "Reserved",
+      "Reserved"
+    ],
+    "defaults": [
+      0.5,
+      0.5,
+      0.25
+    ],
+    "mix": 1.0,
+    "temporal": false,
+    "license": "MIT",
+    "implementation": "Original ACID shader; not imported from third-party libraries",
+    "description": "Processes visible camera imagery. Three-slot stack compatible; order changes the result.",
+    "parameterSchema": [
+      {
+        "index": 0,
+        "label": "Block size",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 1,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": false
+      },
+      {
+        "index": 2,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.25,
+        "used": false
+      }
+    ],
+    "requiredInput": "RGB frame",
+    "sensorMeasurement": false,
+    "mixRange": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Halftone",
+    "category": "Texture",
+    "parameters": [
+      "Dot spacing 3\u201323 pixels",
+      "Reserved",
+      "Reserved"
+    ],
+    "defaults": [
+      0.5,
+      0.5,
+      0.25
+    ],
+    "mix": 1.0,
+    "temporal": false,
+    "license": "MIT",
+    "implementation": "Original ACID shader; not imported from third-party libraries",
+    "description": "Processes visible camera imagery. Three-slot stack compatible; order changes the result.",
+    "parameterSchema": [
+      {
+        "index": 0,
+        "label": "Dot spacing 3\u201323 pixels",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 1,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": false
+      },
+      {
+        "index": 2,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.25,
+        "used": false
+      }
+    ],
+    "requiredInput": "RGB frame",
+    "sensorMeasurement": false,
+    "mixRange": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Scanlines",
+    "category": "Texture",
+    "parameters": [
+      "Line darkness",
+      "Line spacing",
+      "Reserved"
+    ],
+    "defaults": [
+      0.5,
+      0.5,
+      0.25
+    ],
+    "mix": 1.0,
+    "temporal": false,
+    "license": "MIT",
+    "implementation": "Original ACID shader; not imported from third-party libraries",
+    "description": "Processes visible camera imagery. Three-slot stack compatible; order changes the result.",
+    "parameterSchema": [
+      {
+        "index": 0,
+        "label": "Line darkness",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 1,
+        "label": "Line spacing",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 2,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.25,
+        "used": false
+      }
+    ],
+    "requiredInput": "RGB frame",
+    "sensorMeasurement": false,
+    "mixRange": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": 18,
+    "name": "RGB split",
+    "category": "Texture",
+    "parameters": [
+      "Separation",
+      "Direction",
+      "Animation speed"
+    ],
+    "defaults": [
+      0.5,
+      0.5,
+      0.25
+    ],
+    "mix": 1.0,
+    "temporal": false,
+    "license": "MIT",
+    "implementation": "Original ACID shader; not imported from third-party libraries",
+    "description": "Processes visible camera imagery. Three-slot stack compatible; order changes the result.",
+    "parameterSchema": [
+      {
+        "index": 0,
+        "label": "Separation",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 1,
+        "label": "Direction",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 2,
+        "label": "Animation speed",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.25,
+        "used": true
+      }
+    ],
+    "requiredInput": "RGB frame",
+    "sensorMeasurement": false,
+    "mixRange": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Kaleidoscope",
+    "category": "Geometry",
+    "parameters": [
+      "Segments 2 to 16",
+      "Rotation",
+      "Animation speed"
+    ],
+    "defaults": [
+      0.5,
+      0.5,
+      0.25
+    ],
+    "mix": 1.0,
+    "temporal": false,
+    "license": "MIT",
+    "implementation": "Original ACID shader; not imported from third-party libraries",
+    "description": "Processes visible camera imagery. Three-slot stack compatible; order changes the result.",
+    "parameterSchema": [
+      {
+        "index": 0,
+        "label": "Segments 2 to 16",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 1,
+        "label": "Rotation",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 2,
+        "label": "Animation speed",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.25,
+        "used": true
+      }
+    ],
+    "requiredInput": "RGB frame",
+    "sensorMeasurement": false,
+    "mixRange": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Mirror tiles",
+    "category": "Geometry",
+    "parameters": [
+      "Tile repeats 1\u20136",
+      "Reserved",
+      "Reserved"
+    ],
+    "defaults": [
+      0.5,
+      0.5,
+      0.25
+    ],
+    "mix": 1.0,
+    "temporal": false,
+    "license": "MIT",
+    "implementation": "Original ACID shader; not imported from third-party libraries",
+    "description": "Processes visible camera imagery. Three-slot stack compatible; order changes the result.",
+    "parameterSchema": [
+      {
+        "index": 0,
+        "label": "Tile repeats 1\u20136",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 1,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": false
+      },
+      {
+        "index": 2,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.25,
+        "used": false
+      }
+    ],
+    "requiredInput": "RGB frame",
+    "sensorMeasurement": false,
+    "mixRange": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Swirl",
+    "category": "Geometry",
+    "parameters": [
+      "Twist",
+      "Radius",
+      "Animation speed"
+    ],
+    "defaults": [
+      0.75,
+      0.6,
+      0.25
+    ],
+    "mix": 1.0,
+    "temporal": false,
+    "license": "MIT",
+    "implementation": "Original ACID shader; not imported from third-party libraries",
+    "description": "Processes visible camera imagery. Three-slot stack compatible; order changes the result.",
+    "parameterSchema": [
+      {
+        "index": 0,
+        "label": "Twist",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.75,
+        "used": true
+      },
+      {
+        "index": 1,
+        "label": "Radius",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.6,
+        "used": true
+      },
+      {
+        "index": 2,
+        "label": "Animation speed",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.25,
+        "used": true
+      }
+    ],
+    "requiredInput": "RGB frame",
+    "sensorMeasurement": false,
+    "mixRange": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Water ripple",
+    "category": "Geometry",
+    "parameters": [
+      "Amplitude",
+      "Frequency",
+      "Animation speed"
+    ],
+    "defaults": [
+      0.5,
+      0.5,
+      0.25
+    ],
+    "mix": 1.0,
+    "temporal": false,
+    "license": "MIT",
+    "implementation": "Original ACID shader; not imported from third-party libraries",
+    "description": "Processes visible camera imagery. Three-slot stack compatible; order changes the result.",
+    "parameterSchema": [
+      {
+        "index": 0,
+        "label": "Amplitude",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 1,
+        "label": "Frequency",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 2,
+        "label": "Animation speed",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.25,
+        "used": true
+      }
+    ],
+    "requiredInput": "RGB frame",
+    "sensorMeasurement": false,
+    "mixRange": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Fisheye",
+    "category": "Geometry",
+    "parameters": [
+      "Lens curvature",
+      "Reserved",
+      "Reserved"
+    ],
+    "defaults": [
+      0.5,
+      0.5,
+      0.25
+    ],
+    "mix": 1.0,
+    "temporal": false,
+    "license": "MIT",
+    "implementation": "Original ACID shader; not imported from third-party libraries",
+    "description": "Processes visible camera imagery. Three-slot stack compatible; order changes the result.",
+    "parameterSchema": [
+      {
+        "index": 0,
+        "label": "Lens curvature",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 1,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": false
+      },
+      {
+        "index": 2,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.25,
+        "used": false
+      }
+    ],
+    "requiredInput": "RGB frame",
+    "sensorMeasurement": false,
+    "mixRange": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Pinch",
+    "category": "Geometry",
+    "parameters": [
+      "Pinch strength",
+      "Reserved",
+      "Reserved"
+    ],
+    "defaults": [
+      0.5,
+      0.5,
+      0.25
+    ],
+    "mix": 1.0,
+    "temporal": false,
+    "license": "MIT",
+    "implementation": "Original ACID shader; not imported from third-party libraries",
+    "description": "Processes visible camera imagery. Three-slot stack compatible; order changes the result.",
+    "parameterSchema": [
+      {
+        "index": 0,
+        "label": "Pinch strength",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 1,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": false
+      },
+      {
+        "index": 2,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.25,
+        "used": false
+      }
+    ],
+    "requiredInput": "RGB frame",
+    "sensorMeasurement": false,
+    "mixRange": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Polar tunnel",
+    "category": "Geometry",
+    "parameters": [
+      "Tunnel scale",
+      "Reserved",
+      "Animation speed"
+    ],
+    "defaults": [
+      0.5,
+      0.5,
+      0.25
+    ],
+    "mix": 1.0,
+    "temporal": false,
+    "license": "MIT",
+    "implementation": "Original ACID shader; not imported from third-party libraries",
+    "description": "Processes visible camera imagery. Three-slot stack compatible; order changes the result.",
+    "parameterSchema": [
+      {
+        "index": 0,
+        "label": "Tunnel scale",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 1,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": false
+      },
+      {
+        "index": 2,
+        "label": "Animation speed",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.25,
+        "used": true
+      }
+    ],
+    "requiredInput": "RGB frame",
+    "sensorMeasurement": false,
+    "mixRange": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Psychedelic melt",
+    "category": "Geometry",
+    "parameters": [
+      "Melt strength",
+      "Detail frequency",
+      "Animation speed"
+    ],
+    "defaults": [
+      0.5,
+      0.5,
+      0.25
+    ],
+    "mix": 1.0,
+    "temporal": false,
+    "license": "MIT",
+    "implementation": "Original ACID shader; not imported from third-party libraries",
+    "description": "Processes visible camera imagery. Three-slot stack compatible; order changes the result.",
+    "parameterSchema": [
+      {
+        "index": 0,
+        "label": "Melt strength",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 1,
+        "label": "Detail frequency",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 2,
+        "label": "Animation speed",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.25,
+        "used": true
+      }
+    ],
+    "requiredInput": "RGB frame",
+    "sensorMeasurement": false,
+    "mixRange": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Neon edges",
+    "category": "Edges",
+    "parameters": [
+      "Edge strength",
+      "Hue",
+      "Animation speed"
+    ],
+    "defaults": [
+      0.5,
+      0.5,
+      0.25
+    ],
+    "mix": 1.0,
+    "temporal": false,
+    "license": "MIT",
+    "implementation": "Original ACID shader; not imported from third-party libraries",
+    "description": "Processes visible camera imagery. Three-slot stack compatible; order changes the result.",
+    "parameterSchema": [
+      {
+        "index": 0,
+        "label": "Edge strength",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 1,
+        "label": "Hue",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 2,
+        "label": "Animation speed",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.25,
+        "used": true
+      }
+    ],
+    "requiredInput": "RGB frame",
+    "sensorMeasurement": false,
+    "mixRange": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Pencil sketch",
+    "category": "Edges",
+    "parameters": [
+      "Line weight",
+      "Edge radius",
+      "Reserved"
+    ],
+    "defaults": [
+      0.5,
+      0.5,
+      0.25
+    ],
+    "mix": 1.0,
+    "temporal": false,
+    "license": "MIT",
+    "implementation": "Original ACID shader; not imported from third-party libraries",
+    "description": "Processes visible camera imagery. Three-slot stack compatible; order changes the result.",
+    "parameterSchema": [
+      {
+        "index": 0,
+        "label": "Line weight",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 1,
+        "label": "Edge radius",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 2,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.25,
+        "used": false
+      }
+    ],
+    "requiredInput": "RGB frame",
+    "sensorMeasurement": false,
+    "mixRange": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Emboss",
+    "category": "Edges",
+    "parameters": [
+      "Relief strength",
+      "Sample spacing",
+      "Reserved"
+    ],
+    "defaults": [
+      0.5,
+      0.5,
+      0.25
+    ],
+    "mix": 1.0,
+    "temporal": false,
+    "license": "MIT",
+    "implementation": "Original ACID shader; not imported from third-party libraries",
+    "description": "Processes visible camera imagery. Three-slot stack compatible; order changes the result.",
+    "parameterSchema": [
+      {
+        "index": 0,
+        "label": "Relief strength",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 1,
+        "label": "Sample spacing",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 2,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.25,
+        "used": false
+      }
+    ],
+    "requiredInput": "RGB frame",
+    "sensorMeasurement": false,
+    "mixRange": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Sharpen",
+    "category": "Edges",
+    "parameters": [
+      "Sharpen amount",
+      "Sample radius",
+      "Reserved"
+    ],
+    "defaults": [
+      0.5,
+      0.5,
+      0.25
+    ],
+    "mix": 1.0,
+    "temporal": false,
+    "license": "MIT",
+    "implementation": "Original ACID shader; not imported from third-party libraries",
+    "description": "Processes visible camera imagery. Three-slot stack compatible; order changes the result.",
+    "parameterSchema": [
+      {
+        "index": 0,
+        "label": "Sharpen amount",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 1,
+        "label": "Sample radius",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 2,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.25,
+        "used": false
+      }
+    ],
+    "requiredInput": "RGB frame",
+    "sensorMeasurement": false,
+    "mixRange": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": 31,
+    "name": "Soft blur",
+    "category": "Blur",
+    "parameters": [
+      "Blur radius",
+      "Reserved",
+      "Reserved"
+    ],
+    "defaults": [
+      0.5,
+      0.5,
+      0.25
+    ],
+    "mix": 1.0,
+    "temporal": false,
+    "license": "MIT",
+    "implementation": "Original ACID shader; not imported from third-party libraries",
+    "description": "Processes visible camera imagery. Three-slot stack compatible; order changes the result.",
+    "parameterSchema": [
+      {
+        "index": 0,
+        "label": "Blur radius",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 1,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": false
+      },
+      {
+        "index": 2,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.25,
+        "used": false
+      }
+    ],
+    "requiredInput": "RGB frame",
+    "sensorMeasurement": false,
+    "mixRange": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": 32,
+    "name": "Radial blur",
+    "category": "Blur",
+    "parameters": [
+      "Blur strength",
+      "Reserved",
+      "Reserved"
+    ],
+    "defaults": [
+      0.5,
+      0.5,
+      0.25
+    ],
+    "mix": 1.0,
+    "temporal": false,
+    "license": "MIT",
+    "implementation": "Original ACID shader; not imported from third-party libraries",
+    "description": "Processes visible camera imagery. Three-slot stack compatible; order changes the result.",
+    "parameterSchema": [
+      {
+        "index": 0,
+        "label": "Blur strength",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 1,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": false
+      },
+      {
+        "index": 2,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.25,
+        "used": false
+      }
+    ],
+    "requiredInput": "RGB frame",
+    "sensorMeasurement": false,
+    "mixRange": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": 33,
+    "name": "Highlight bloom",
+    "category": "Blur",
+    "parameters": [
+      "Bloom radius",
+      "Highlight threshold",
+      "Reserved"
+    ],
+    "defaults": [
+      0.5,
+      0.5,
+      0.25
+    ],
+    "mix": 1.0,
+    "temporal": false,
+    "license": "MIT",
+    "implementation": "Original ACID shader; not imported from third-party libraries",
+    "description": "Processes visible camera imagery. Three-slot stack compatible; order changes the result.",
+    "parameterSchema": [
+      {
+        "index": 0,
+        "label": "Bloom radius",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 1,
+        "label": "Highlight threshold",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 2,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.25,
+        "used": false
+      }
+    ],
+    "requiredInput": "RGB frame",
+    "sensorMeasurement": false,
+    "mixRange": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": 34,
+    "name": "Chrome foliage \u00b7 RGB mask",
+    "category": "Spectral simulation",
+    "parameters": [
+      "Green selectivity",
+      "Chrome contrast",
+      "Reserved"
+    ],
+    "defaults": [
+      0.5,
+      0.5,
+      0.25
+    ],
+    "mix": 1.0,
+    "temporal": false,
+    "license": "MIT",
+    "implementation": "Original ACID shader; not imported from third-party libraries",
+    "description": "Processes visible camera imagery. Artistic RGB simulation: no infrared or temperature measurement.",
+    "parameterSchema": [
+      {
+        "index": 0,
+        "label": "Green selectivity",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 1,
+        "label": "Chrome contrast",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 2,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.25,
+        "used": false
+      }
+    ],
+    "requiredInput": "RGB frame",
+    "sensorMeasurement": false,
+    "mixRange": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": 35,
+    "name": "Infrared look \u00b7 SIMULATED",
+    "category": "Spectral simulation",
+    "parameters": [
+      "Foliage selectivity",
+      "Channel shift",
+      "Reserved"
+    ],
+    "defaults": [
+      0.5,
+      0.5,
+      0.25
+    ],
+    "mix": 1.0,
+    "temporal": false,
+    "license": "MIT",
+    "implementation": "Original ACID shader; not imported from third-party libraries",
+    "description": "Processes visible camera imagery. Artistic RGB simulation: no infrared or temperature measurement.",
+    "parameterSchema": [
+      {
+        "index": 0,
+        "label": "Foliage selectivity",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 1,
+        "label": "Channel shift",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 2,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.25,
+        "used": false
+      }
+    ],
+    "requiredInput": "RGB frame",
+    "sensorMeasurement": false,
+    "mixRange": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": 36,
+    "name": "Thermal palette \u00b7 SIMULATED",
+    "category": "Spectral simulation",
+    "parameters": [
+      "Contrast",
+      "Palette offset",
+      "Reserved"
+    ],
+    "defaults": [
+      0.5,
+      0.5,
+      0.25
+    ],
+    "mix": 1.0,
+    "temporal": false,
+    "license": "MIT",
+    "implementation": "Original ACID shader; not imported from third-party libraries",
+    "description": "Processes visible camera imagery. Artistic RGB simulation: no infrared or temperature measurement.",
+    "parameterSchema": [
+      {
+        "index": 0,
+        "label": "Contrast",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 1,
+        "label": "Palette offset",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 2,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.25,
+        "used": false
+      }
+    ],
+    "requiredInput": "RGB frame",
+    "sensorMeasurement": false,
+    "mixRange": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": 37,
+    "name": "Gradient map",
+    "category": "Color",
+    "parameters": [
+      "Shadow hue",
+      "Highlight hue",
+      "Reserved"
+    ],
+    "defaults": [
+      0.08,
+      0.6,
+      0.25
+    ],
+    "mix": 1.0,
+    "temporal": false,
+    "license": "MIT",
+    "implementation": "Original ACID shader; not imported from third-party libraries",
+    "description": "Processes visible camera imagery. Three-slot stack compatible; order changes the result.",
+    "parameterSchema": [
+      {
+        "index": 0,
+        "label": "Shadow hue",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.08,
+        "used": true
+      },
+      {
+        "index": 1,
+        "label": "Highlight hue",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.6,
+        "used": true
+      },
+      {
+        "index": 2,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.25,
+        "used": false
+      }
+    ],
+    "requiredInput": "RGB frame",
+    "sensorMeasurement": false,
+    "mixRange": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": 38,
+    "name": "Comic ink",
+    "category": "Print",
+    "parameters": [
+      "Ink edge threshold",
+      "Color levels 3\u201310",
+      "Reserved"
+    ],
+    "defaults": [
+      0.5,
+      0.5,
+      0.25
+    ],
+    "mix": 1.0,
+    "temporal": false,
+    "license": "MIT",
+    "implementation": "Original ACID shader; not imported from third-party libraries",
+    "description": "Processes visible camera imagery. Three-slot stack compatible; order changes the result.",
+    "parameterSchema": [
+      {
+        "index": 0,
+        "label": "Ink edge threshold",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 1,
+        "label": "Color levels 3\u201310",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 2,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.25,
+        "used": false
+      }
+    ],
+    "requiredInput": "RGB frame",
+    "sensorMeasurement": false,
+    "mixRange": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": 39,
+    "name": "Crosshatch",
+    "category": "Print",
+    "parameters": [
+      "Hatch frequency",
+      "Reserved",
+      "Reserved"
+    ],
+    "defaults": [
+      0.5,
+      0.5,
+      0.25
+    ],
+    "mix": 1.0,
+    "temporal": false,
+    "license": "MIT",
+    "implementation": "Original ACID shader; not imported from third-party libraries",
+    "description": "Processes visible camera imagery. Three-slot stack compatible; order changes the result.",
+    "parameterSchema": [
+      {
+        "index": 0,
+        "label": "Hatch frequency",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 1,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": false
+      },
+      {
+        "index": 2,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.25,
+        "used": false
+      }
+    ],
+    "requiredInput": "RGB frame",
+    "sensorMeasurement": false,
+    "mixRange": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": 40,
+    "name": "Dot screen",
+    "category": "Print",
+    "parameters": [
+      "Dot spacing",
+      "Background gray",
+      "Reserved"
+    ],
+    "defaults": [
+      0.5,
+      0.5,
+      0.25
+    ],
+    "mix": 1.0,
+    "temporal": false,
+    "license": "MIT",
+    "implementation": "Original ACID shader; not imported from third-party libraries",
+    "description": "Processes visible camera imagery. Three-slot stack compatible; order changes the result.",
+    "parameterSchema": [
+      {
+        "index": 0,
+        "label": "Dot spacing",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 1,
+        "label": "Background gray",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 2,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.25,
+        "used": false
+      }
+    ],
+    "requiredInput": "RGB frame",
+    "sensorMeasurement": false,
+    "mixRange": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": 41,
+    "name": "Glyph mosaic",
+    "category": "Print",
+    "parameters": [
+      "Glyph size",
+      "Glyph hue",
+      "Reserved"
+    ],
+    "defaults": [
+      0.5,
+      0.5,
+      0.25
+    ],
+    "mix": 1.0,
+    "temporal": false,
+    "license": "MIT",
+    "implementation": "Original ACID shader; not imported from third-party libraries",
+    "description": "Processes visible camera imagery. Three-slot stack compatible; order changes the result.",
+    "parameterSchema": [
+      {
+        "index": 0,
+        "label": "Glyph size",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 1,
+        "label": "Glyph hue",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 2,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.25,
+        "used": false
+      }
+    ],
+    "requiredInput": "RGB frame",
+    "sensorMeasurement": false,
+    "mixRange": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": 42,
+    "name": "Glitch bands",
+    "category": "Glitch",
+    "parameters": [
+      "Band displacement",
+      "Band count",
+      "Animation speed"
+    ],
+    "defaults": [
+      0.5,
+      0.5,
+      0.25
+    ],
+    "mix": 1.0,
+    "temporal": false,
+    "license": "MIT",
+    "implementation": "Original ACID shader; not imported from third-party libraries",
+    "description": "Processes visible camera imagery. Three-slot stack compatible; order changes the result.",
+    "parameterSchema": [
+      {
+        "index": 0,
+        "label": "Band displacement",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 1,
+        "label": "Band count",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 2,
+        "label": "Animation speed",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.25,
+        "used": true
+      }
+    ],
+    "requiredInput": "RGB frame",
+    "sensorMeasurement": false,
+    "mixRange": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": 43,
+    "name": "CRT bend",
+    "category": "Glitch",
+    "parameters": [
+      "Screen curvature",
+      "Reserved",
+      "Reserved"
+    ],
+    "defaults": [
+      0.5,
+      0.5,
+      0.25
+    ],
+    "mix": 1.0,
+    "temporal": false,
+    "license": "MIT",
+    "implementation": "Original ACID shader; not imported from third-party libraries",
+    "description": "Processes visible camera imagery. Three-slot stack compatible; order changes the result.",
+    "parameterSchema": [
+      {
+        "index": 0,
+        "label": "Screen curvature",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 1,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": false
+      },
+      {
+        "index": 2,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.25,
+        "used": false
+      }
+    ],
+    "requiredInput": "RGB frame",
+    "sensorMeasurement": false,
+    "mixRange": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": 44,
+    "name": "Micro stars",
+    "category": "Pattern",
+    "parameters": [
+      "Star spacing",
+      "Background gray",
+      "Reserved"
+    ],
+    "defaults": [
+      0.5,
+      0.5,
+      0.25
+    ],
+    "mix": 1.0,
+    "temporal": false,
+    "license": "MIT",
+    "implementation": "Original ACID shader; not imported from third-party libraries",
+    "description": "Processes visible camera imagery. Three-slot stack compatible; order changes the result.",
+    "parameterSchema": [
+      {
+        "index": 0,
+        "label": "Star spacing",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 1,
+        "label": "Background gray",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 2,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.25,
+        "used": false
+      }
+    ],
+    "requiredInput": "RGB frame",
+    "sensorMeasurement": false,
+    "mixRange": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": 45,
+    "name": "Micro hearts",
+    "category": "Pattern",
+    "parameters": [
+      "Heart spacing",
+      "Background gray",
+      "Reserved"
+    ],
+    "defaults": [
+      0.5,
+      0.5,
+      0.25
+    ],
+    "mix": 1.0,
+    "temporal": false,
+    "license": "MIT",
+    "implementation": "Original ACID shader; not imported from third-party libraries",
+    "description": "Processes visible camera imagery. Three-slot stack compatible; order changes the result.",
+    "parameterSchema": [
+      {
+        "index": 0,
+        "label": "Heart spacing",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 1,
+        "label": "Background gray",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 2,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.25,
+        "used": false
+      }
+    ],
+    "requiredInput": "RGB frame",
+    "sensorMeasurement": false,
+    "mixRange": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": 46,
+    "name": "Checker fill",
+    "category": "Pattern",
+    "parameters": [
+      "Checker size",
+      "Background gray",
+      "Reserved"
+    ],
+    "defaults": [
+      0.5,
+      0.5,
+      0.25
+    ],
+    "mix": 1.0,
+    "temporal": false,
+    "license": "MIT",
+    "implementation": "Original ACID shader; not imported from third-party libraries",
+    "description": "Processes visible camera imagery. Three-slot stack compatible; order changes the result.",
+    "parameterSchema": [
+      {
+        "index": 0,
+        "label": "Checker size",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 1,
+        "label": "Background gray",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 2,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.25,
+        "used": false
+      }
+    ],
+    "requiredInput": "RGB frame",
+    "sensorMeasurement": false,
+    "mixRange": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": 47,
+    "name": "Rainbow contours",
+    "category": "Psychedelic",
+    "parameters": [
+      "Contour count",
+      "Hue offset",
+      "Animation speed"
+    ],
+    "defaults": [
+      0.5,
+      0.5,
+      0.25
+    ],
+    "mix": 1.0,
+    "temporal": false,
+    "license": "MIT",
+    "implementation": "Original ACID shader; not imported from third-party libraries",
+    "description": "Processes visible camera imagery. Three-slot stack compatible; order changes the result.",
+    "parameterSchema": [
+      {
+        "index": 0,
+        "label": "Contour count",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 1,
+        "label": "Hue offset",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 2,
+        "label": "Animation speed",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.25,
+        "used": true
+      }
+    ],
+    "requiredInput": "RGB frame",
+    "sensorMeasurement": false,
+    "mixRange": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": 48,
+    "name": "Luma relief",
+    "category": "Psychedelic",
+    "parameters": [
+      "Relief spacing",
+      "Light direction",
+      "Light rotation speed"
+    ],
+    "defaults": [
+      0.5,
+      0.5,
+      0.25
+    ],
+    "mix": 1.0,
+    "temporal": false,
+    "license": "MIT",
+    "implementation": "Original ACID shader; not imported from third-party libraries",
+    "description": "Processes visible camera imagery. Three-slot stack compatible; order changes the result.",
+    "parameterSchema": [
+      {
+        "index": 0,
+        "label": "Relief spacing",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 1,
+        "label": "Light direction",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 2,
+        "label": "Light rotation speed",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.25,
+        "used": true
+      }
+    ],
+    "requiredInput": "RGB frame",
+    "sensorMeasurement": false,
+    "mixRange": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": 49,
+    "name": "Acid negative",
+    "category": "Psychedelic",
+    "parameters": [
+      "Color frequency",
+      "Channel phase",
+      "Animation speed"
+    ],
+    "defaults": [
+      0.5,
+      0.5,
+      0.25
+    ],
+    "mix": 1.0,
+    "temporal": false,
+    "license": "MIT",
+    "implementation": "Original ACID shader; not imported from third-party libraries",
+    "description": "Processes visible camera imagery. Three-slot stack compatible; order changes the result.",
+    "parameterSchema": [
+      {
+        "index": 0,
+        "label": "Color frequency",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 1,
+        "label": "Channel phase",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 2,
+        "label": "Animation speed",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.25,
+        "used": true
+      }
+    ],
+    "requiredInput": "RGB frame",
+    "sensorMeasurement": false,
+    "mixRange": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": 50,
+    "name": "Motion difference",
+    "category": "Temporal",
+    "parameters": [
+      "Difference sensitivity",
+      "Noise threshold",
+      "Reserved"
+    ],
+    "defaults": [
+      0.5,
+      0.5,
+      0.25
+    ],
+    "mix": 1.0,
+    "temporal": true,
+    "license": "MIT",
+    "implementation": "Original ACID shader; not imported from third-party libraries",
+    "description": "Processes visible camera imagery. Uses previous frames; still output is a preview-sized frame.",
+    "parameterSchema": [
+      {
+        "index": 0,
+        "label": "Difference sensitivity",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 1,
+        "label": "Noise threshold",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 2,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.25,
+        "used": false
+      }
+    ],
+    "requiredInput": "RGB frames plus per-slot frame history",
+    "sensorMeasurement": false,
+    "mixRange": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": 51,
+    "name": "Echo trails",
+    "category": "Temporal",
+    "parameters": [
+      "Persistence",
+      "Feedback zoom",
+      "Reserved"
+    ],
+    "defaults": [
+      0.5,
+      0.5,
+      0.25
+    ],
+    "mix": 1.0,
+    "temporal": true,
+    "license": "MIT",
+    "implementation": "Original ACID shader; not imported from third-party libraries",
+    "description": "Processes visible camera imagery. Uses previous frames; still output is a preview-sized frame.",
+    "parameterSchema": [
+      {
+        "index": 0,
+        "label": "Persistence",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 1,
+        "label": "Feedback zoom",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 2,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.25,
+        "used": false
+      }
+    ],
+    "requiredInput": "RGB frames plus per-slot frame history",
+    "sensorMeasurement": false,
+    "mixRange": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": 52,
+    "name": "Light painting",
+    "category": "Temporal",
+    "parameters": [
+      "Persistence",
+      "Highlight cutoff",
+      "Reserved"
+    ],
+    "defaults": [
+      0.5,
+      0.5,
+      0.25
+    ],
+    "mix": 1.0,
+    "temporal": true,
+    "license": "MIT",
+    "implementation": "Original ACID shader; not imported from third-party libraries",
+    "description": "Processes visible camera imagery. Uses previous frames; still output is a preview-sized frame.",
+    "parameterSchema": [
+      {
+        "index": 0,
+        "label": "Persistence",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 1,
+        "label": "Highlight cutoff",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 2,
+        "label": "Reserved",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.25,
+        "used": false
+      }
+    ],
+    "requiredInput": "RGB frames plus per-slot frame history",
+    "sensorMeasurement": false,
+    "mixRange": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": 53,
+    "name": "Motion color trails",
+    "category": "Temporal",
+    "parameters": [
+      "Persistence",
+      "Motion threshold",
+      "Hue speed"
+    ],
+    "defaults": [
+      0.5,
+      0.5,
+      0.25
+    ],
+    "mix": 1.0,
+    "temporal": true,
+    "license": "MIT",
+    "implementation": "Original ACID shader; not imported from third-party libraries",
+    "description": "Processes visible camera imagery. Uses previous frames; still output is a preview-sized frame.",
+    "parameterSchema": [
+      {
+        "index": 0,
+        "label": "Persistence",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 1,
+        "label": "Motion threshold",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.5,
+        "used": true
+      },
+      {
+        "index": 2,
+        "label": "Hue speed",
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "step": 0.001,
+        "default": 0.25,
+        "used": true
+      }
+    ],
+    "requiredInput": "RGB frames plus per-slot frame history",
+    "sensorMeasurement": false,
+    "mixRange": [
+      0,
+      1
+    ]
+  }
+]
