@@ -17,7 +17,7 @@ cp "$project/dist/catalog.json" "$build/assets/desk/"
 cp -r "$project/dist/ocr" "$build/assets/desk/"
 cp -r "$project/dist/brand" "$build/assets/desk/"
 cp -r "$project/android/assets/." "$build/assets/"
-for name in wide-net.js studio-render.js studio.js cards.js cards-sources.json help.js merch.js promoters.js affiliate.js index.html styles.css app.js licensing.js leads.js plan.js intake.js idle.js workdesk.js; do
+for name in wide-net-feeds.json wide-sources.js wide-tools.js wide-net.js studio-render.js studio.js cards.js cards-sources.json help.js merch.js promoters.js affiliate.js index.html styles.css app.js licensing.js leads.js plan.js intake.js idle.js workdesk.js; do
   cp "$project/dist/$name" "$build/assets/desk/"
 done
 "$tools/aapt2" compile --dir "$project/android/res" -o "$build/resources.zip"

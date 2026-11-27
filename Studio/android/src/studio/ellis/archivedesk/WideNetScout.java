@@ -42,31 +42,29 @@ final class WideNetScout {
     static String fetch() {
         ExecutorService pool = Executors.newFixedThreadPool(3);
         JSONArray rows = new JSONArray();
-        StringBuilder sources = new StringBuilder();
+        JSONArray health = new JSONArray();
         try {
             List<Callable<JSONArray>> tasks = Arrays.asList(WideNetScout::grants, WideNetScout::tenders, WideNetScout::artsCalls);
             List<Future<JSONArray>> results = pool.invokeAll(tasks, 26, TimeUnit.SECONDS);
             for (int i = 0; i < results.size(); i++) {
-                if (i > 0) sources.append(" · ");
-                sources.append(NAMES[i]);
+                JSONObject source = new JSONObject().put("name", NAMES[i]);
                 try {
                     JSONArray found = results.get(i).get();
                     for (int n = 0; n < found.length(); n++) rows.put(found.get(n));
-                    sources.append(": ").append(found.length()).append(" candidates");
+                    source.put("pages", 1).put("count", found.length());
                 } catch (java.util.concurrent.ExecutionException | java.util.concurrent.CancellationException unavailable) {
-                    sources.append(": unavailable");
+                    source.put("pages", 0).put("error", "Unavailable");
                 }
+                health.put(source);
             }
         } catch (InterruptedException stop) {
             Thread.currentThread().interrupt();
-            sources.append("Sweep interrupted");
         } catch (JSONException invalid) {
-            sources.append("Some candidates could not be read");
         } finally {
             pool.shutdownNow();
         }
         try {
-            return new JSONObject().put("rows", rows).put("summary", sources.toString()).toString();
+            return new JSONObject().put("rows", rows).put("health", health).toString();
         } catch (JSONException impossible) {
             return "{\"rows\":[],\"summary\":\"Sweep unavailable.\"}";
         }
@@ -88,10 +86,11 @@ final class WideNetScout {
                     String deadline = hit.optString("closeDate");
                     String date = deadline.matches("\\d{2}/\\d{2}/\\d{4}") ?
                         deadline.substring(6)+"-"+deadline.substring(0,2)+"-"+deadline.substring(3,5) : "";
-                    if (!id.matches("\\d+") || title.isEmpty() || !"posted".equals(hit.optString("oppStatus")) ||
-                        (!date.isEmpty() && date.compareTo(day(0)) < 0) || !seen.add(id)) continue;
-                    String description = hit.optString("agencyName",hit.optString("agency"))+" · "+hit.optString("number");
-                    rows.put(row("https://www.grants.gov/search-results-detail/"+id,title,description,date,"grant","Grants.gov",lane(title,"copy")));
+                    if (!id.matches("\\d+") || title.isEmpty() || !"posted".equals(hit.optString("oppStatus")) || !seen.add(id)) continue;
+                    String organizer = hit.optString("agencyName",hit.optString("agency"));
+                    String url = "https://www.grants.gov/search-results-detail/"+id;
+                    rows.put(row(url,title,organizer+" · "+hit.optString("number"),date,"grant","Grants.gov",lane(title,"copy"))
+                        .put("official",url).put("organizer",organizer).put("providerState","open").put("language","en"));
                 }
             } catch (IOException | JSONException unavailable) {
                 // A failed query must not erase matches from other queries.
@@ -125,7 +124,9 @@ final class WideNetScout {
                     (date.isEmpty() || candidate.compareTo(date) < 0)) date = candidate;
             }
             if (date.isEmpty()) continue;
-            rows.put(row("https://ted.europa.eu/en/notice/-/detail/"+id,title,description,date,"commission","EU TED",lane(title+" "+description,"design")));
+            String url = "https://ted.europa.eu/en/notice/-/detail/"+id;
+            rows.put(row(url,title,description,date,"commission","EU TED",lane(title+" "+description,"design"))
+                .put("official",url).put("providerState","open"));
         }
         return rows;
     }
@@ -171,7 +172,7 @@ final class WideNetScout {
         return keys.hasNext() ? values.optString(keys.next()).trim() : "";
     }
 
-    private static String day(int offset) {
+    static String day(int offset) {
         SimpleDateFormat iso = new SimpleDateFormat("yyyy-MM-dd", Locale.ROOT);
         iso.setTimeZone(TimeZone.getTimeZone("UTC"));
         return iso.format(new Date(System.currentTimeMillis()+offset*86400000L));
@@ -181,14 +182,18 @@ final class WideNetScout {
         return value.length() > limit ? value.substring(0,limit) : value;
     }
 
-    private static String request(String address, JSONObject body) throws IOException {
+    static final class RateLimited extends IOException {
+        private static final long serialVersionUID = 1L;
+    }
+
+    static String request(String address, JSONObject body) throws IOException {
         HttpsURLConnection connection = (HttpsURLConnection)new URL(address).openConnection();
         try {
             connection.setConnectTimeout(5500);
             connection.setReadTimeout(5500);
             connection.setInstanceFollowRedirects(false);
-            connection.setRequestProperty("User-Agent","iMAG3-WideNet/1.0 (manual public opportunity search)");
-            connection.setRequestProperty("Accept",body == null ? "text/html" : "application/json");
+            connection.setRequestProperty("User-Agent","iMAG3-Studio/1.0 (+https://github.com/triplxinx/image-anarquee-android)");
+            connection.setRequestProperty("Accept",body == null ? "*/*" : "application/json");
             if (body != null) {
                 byte[] bytes = body.toString().getBytes(StandardCharsets.UTF_8);
                 connection.setRequestMethod("POST");
@@ -197,7 +202,9 @@ final class WideNetScout {
                 connection.setFixedLengthStreamingMode(bytes.length);
                 try (OutputStream out = connection.getOutputStream()) { out.write(bytes); }
             }
-            if (connection.getResponseCode() != 200) throw new IOException("Source unavailable");
+            int code = connection.getResponseCode();
+            if (code == 429) throw new RateLimited();
+            if (code != 200) throw new IOException("Source unavailable");
             try (InputStream in = connection.getInputStream(); ByteArrayOutputStream out = new ByteArrayOutputStream()) {
                 byte[] buffer = new byte[8192];
                 for (int length; (length = in.read(buffer)) != -1;) {

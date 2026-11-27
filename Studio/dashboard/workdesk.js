@@ -77,6 +77,10 @@ window.ArchiveWorkdesk = (() => {
     return '';
   }
   function leadIsActive(row, now=new Date()){
+    if(row.wideKey) {
+      const brief=window.WideNet?.verifiedBrief(row.wideKey);
+      return Boolean(row.verified && brief && row.source===row.wideKey && row.contact===brief.application);
+    }
     if(row.category==='affiliate'||!row.verified||!['brief','intake','represented'].includes(row.kind)||!https(row.source)||!contactHref(row.contact))return false;
     if(row.kind==='represented'&&(!https(row.corroboration)||new URL(row.source).hostname===new URL(row.corroboration).hostname))return false;
     const checked=Date.parse(row.checked+'T00:00:00Z');
@@ -85,6 +89,7 @@ window.ArchiveWorkdesk = (() => {
     return !row.deadline || Date.parse(row.deadline+'T00:00:00Z')>=today;
   }
   function marketScore(row){
+    if(row.wideIdea)return window.WideNet?.eligibleWorkload(row.wideKey)||null;
     if(!https(row.evidence))return null;
     const [demand,competition,views,clicks,purchases]=['demand','competition','views','clicks','purchases']
       .map(key=>String(row[key]??'').trim()===''?NaN:Number(row[key]));
@@ -136,6 +141,12 @@ window.ArchiveWorkdesk = (() => {
     }));
     const original=find();
     if(original?.board && original.source===row.source)row.board=original.board;
+    if(original?.wideKey && original.source===row.source){
+      row.wideKey=original.wideKey;
+      row.wideIdea=original.wideIdea;
+      row.wideContext=original.wideContext;
+    }
+    if(original?.wideIdea&&!row.wideKey)row.buy='';
     row.id=original?.id??crypto.randomUUID();
     row.verified=data.get('verified')==='on';
     if(!row.name||!Object.hasOwn(categories,row.category))throw Error('Choose a category and enter a buyer or prospect.');
@@ -176,19 +187,26 @@ window.ArchiveWorkdesk = (() => {
     root.querySelector('[data-desk-editor-title]').textContent=row?.name??'New opportunity';
     const links=root.querySelector('[data-desk-links]');
     links.replaceChildren();
-    for(const [url,label] of [[https(row?.source),'Primary source'],[contactHref(row?.contact),'Buyer contact'],[https(row?.buy),'Checkout']]){
+    const current=row?.wideKey?window.WideNet.verifiedBrief(row.wideKey):null;
+    const buyer=row?.wideKey?current?.application:row?.contact;
+    const buy=row?.wideIdea?window.WideNet.directBuy(row.wideKey):row?.buy;
+    const evidence=row?.wideIdea?window.WideNet.eligibleWorkload(row.wideKey)?.data?.url:row?.evidence;
+    for(const [url,label] of [[https(current?.official||row?.source),'Primary source'],[contactHref(buyer),'Buyer contact'],[https(buy),'Checkout'],[https(evidence),'Market evidence']]){
       if(!url)continue;
       const link=document.createElement('a');link.className='quiet';link.href=url;link.textContent=label;links.append(link);
     }
-    root.querySelector('[data-desk-result]').textContent=row?feasibility(row).label:'';
+    root.querySelector('[data-desk-result]').textContent=row?[
+      feasibility(row).label,row.wideContext,row.wideKey&&!current?'Wide Net evidence needs review.':''
+    ].filter(Boolean).join(' · '):'';
   }
   function proposal(row){
     if(row.category==='affiliate')return row.draft||row.notes||'Draft a disclosed recommendation.';
     const [title,deliverable]=categories[row.category];
-    const subject=title+' for '+row.name;
+    const product=row.wideIdea?window.WideNet?.ideaFor(row.wideKey)?.title:'';
+    const subject=(product||title)+' for '+row.name;
     const identity=row.kind==='prospect'?'I’d like to propose a small test that’s easy to review.':'I’m reaching out through the route for this opportunity.';
     return ['Subject: '+subject,'','Hi '+row.name+',',identity,
-      'I can prepare '+deliverable.charAt(0).toLowerCase()+deliverable.slice(1)+'.',
+      product?'Proposed deliverable: '+product+'.':'I can prepare '+deliverable.charAt(0).toLowerCase()+deliverable.slice(1)+'.',
       ...(row.notes?['Working context: '+row.notes]:[]),
       'Would you like a short preview and a fixed-scope quote?','','Proposed scope','- '+deliverable+'.',
       '- Confirm deadline, usage rights, final format, revisions, and acceptance.',
@@ -414,22 +432,36 @@ window.ArchiveWorkdesk = (() => {
   function addScoutedBrief(brief) {
     const rows=records();
     const current=rows.find(row=>row.source===brief.url);
-    if(!current){
-      const notes=[brief.description,brief.approach==='new'?'Produce new work':brief.approach==='existing'?'Adapt existing work':'',
+    const {proof,plan,assets,cause,aesthetic}=brief.fit;
+    const idea=brief.idea;
+    if(!current || proof.active || current.wideKey) {
+      const context=[brief.description,brief.approach==='new'?'Produce new work':brief.approach==='existing'?'Adapt existing work':'',
         brief.production?'Production deadline '+brief.production:'',
-        brief.official?'Organizer: '+brief.official:'',
+        brief.dependencyNotes?'Dependencies: '+brief.dependencyNotes:'',
+        brief.organizer?'Organizer: '+brief.organizer:'',
+        brief.official?'First-party source: '+brief.official:'',
+        brief.compensation?'Compensation as posted: '+brief.compensation:'',
         brief.niche?'Specific niche: '+brief.niche:'',
-        brief.fit.competition.measured?'Published count: '+brief.fit.competition.observed+' checked '+brief.reviewedOn+' at '+brief.competitionSource:'',
-        brief.hours?'Estimate '+brief.hours+' h, '+brief.fit.buffered+' h with buffer, '+(brief.available||'unknown')+' h available':'',
-        brief.fit.cause.length?'Cause terms: '+brief.fit.cause.join(', '):'',
-        brief.fit.aesthetic.length?'Aesthetic terms: '+brief.fit.aesthetic.join(', '):'',
-        'Check the official application route, eligibility, rights and compensation.'].filter(Boolean).join('\n');
-      const row={id:crypto.randomUUID(),name:brief.title,kind:brief.kind==='intake'?'intake':'brief',
-        category:brief.lane,source:brief.url,contact:brief.official||'',deadline:brief.closing||'',checked:'',verified:false,notes:notes.slice(0,3000)};
-      if(!api.write([row,...rows]))return false;
+        proof.measured?'Published count: '+proof.observed+' checked '+brief.checks.count+' at '+brief.competitionSource:'',
+        plan.hours?'Plan: '+plan.buffered+' h with buffer. '+plan.status:'',
+        plan.quote!==null?'Minimum quote: USD '+plan.quote.toFixed(2):'',
+        plan.recipe?'Proof: '+plan.recipe.proof:'',
+        assets.length?'Cleared portfolio: '+assets.map(x=>x.asset.name).join(', '):'',
+        cause.length?'Cause terms: '+cause.join(', '):'',
+        aesthetic.length?'Aesthetic terms: '+aesthetic.join(', '):'',
+        idea?'Speculative product: '+idea.title+' — '+idea.fit:''].filter(Boolean).join('\n').slice(0,3000);
+      const row={...(current||{}),id:current?.id||crypto.randomUUID(),name:brief.organizer||brief.title,
+        kind:brief.kind==='intake'?'intake':'brief',category:brief.lane,source:brief.url,contact:brief.application||'',
+        deadline:brief.closing||'',checked:proof.checked||'',verified:proof.active,wideKey:brief.url,
+        notes:current?.notes||context,wideContext:context,wideIdea:Boolean(idea||current?.wideIdea)};
+      if(idea){row.keyword=idea.title;row.evidence=idea.signal.url;row.buy=brief.buy||'';}
+      if(!api.write(current?rows.map(existing=>existing.id===current.id?row:existing):[row,...rows]))return false;
     }
-    window.addEventListener('hashchange',()=>openSource(brief.url),{once:true});
-    location.hash='workdesk';
+    if(location.hash==='#workdesk')openSource(brief.url);
+    else {
+      window.addEventListener('hashchange',()=>openSource(brief.url),{once:true});
+      location.hash='workdesk';
+    }
     return true;
   }
   return {openSource,addScoutedBrief,addCampaign,connect(adapter){api=adapter;},mount,markup,receive,leadIsActive,marketScore,feasibility};
