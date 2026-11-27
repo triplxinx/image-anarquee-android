@@ -35,15 +35,18 @@ window.WideSources = (() => {
       }
     } finally { await reader.cancel().catch(()=>{}); }
   }
-  async function raw(source, feed, cursor = '') {
+  async function raw(source, feed, cursor = '', until = '') {
     const proxy = new URL('../wide-feed.php',location.href);
-    proxy.search = new URLSearchParams({source,cursor}).toString();
+    proxy.search = new URLSearchParams({source,cursor,until}).toString();
     try {
       return await read(await fetch(proxy,{credentials:'omit',signal:AbortSignal.timeout(8500)}));
     } catch (error) {
       if (window.ArchiveNative || (error.status && error.status!==404 && error.status!==405)) throw error;
       const url = new URL(feed.url);
-      if (cursor) url.searchParams.set('cursor',cursor);
+      if (cursor) {
+        url.searchParams.set('cursor',cursor);
+        url.searchParams.set('updatedTo',until);
+      }
       return read(await fetch(url,{credentials:'omit',signal:AbortSignal.timeout(7000)}));
     }
   }
@@ -136,13 +139,16 @@ window.WideSources = (() => {
         const json = JSON.parse(first);
         rows = procurement(json,today);
         if (typeof json.links?.next === 'string') {
-          const cursor = new URL(json.links.next,feed.url).searchParams.get('cursor');
-          if (cursor && /^[A-Za-z0-9_+.=/\-]{1,300}$/.test(cursor)) {
+          const next = new URL(json.links.next,feed.url);
+          const cursor = next.searchParams.get('cursor');
+          const until = next.searchParams.get('updatedTo');
+          if (next.origin===new URL(feed.url).origin && cursor && /^[A-Za-z0-9_+.=/\-]{1,300}$/.test(cursor) &&
+              /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}$/.test(until||'')) {
             try {
-              rows.push(...procurement(JSON.parse(await raw(key,feed,cursor)),today));
+              rows.push(...procurement(JSON.parse(await raw(key,feed,cursor,until)),today));
               pages++;
             } catch (failure) { limited=failure.status===429;error = limited?'Page 2 rate limited':'Page 2 unavailable'; }
-          }
+          } else error='Continuation metadata unavailable';
         }
       } else rows=directory(first,feed);
     } catch (failure) { limited=failure.status===429;error = failure.message || 'Source unavailable'; }

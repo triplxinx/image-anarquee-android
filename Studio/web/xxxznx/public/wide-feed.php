@@ -6,6 +6,7 @@ header('X-Content-Type-Options: nosniff');
 header('Content-Type: text/plain; charset=utf-8');
 $key = $_GET['source'] ?? null;
 $cursor = $_GET['cursor'] ?? '';
+$until = $_GET['until'] ?? '';
 $feeds = json_decode((string) @file_get_contents(__DIR__.'/studio/wide-net-feeds.json'), true);
 $feed = is_string($key) && is_array($feeds) ? ($feeds[$key] ?? null) : null;
 if ($_SERVER['REQUEST_METHOD'] !== 'GET') {
@@ -27,9 +28,11 @@ if ($key === 'wiki') {
     }
     $url = 'https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/'.$language.
         '.wikipedia/all-access/user/'.rawurlencode($topic).'/daily/'.$start.'/'.$end;
-} elseif ($feed && is_string($cursor) &&
-    ($cursor === '' || (!empty($feed['cursor']) && preg_match('/^[A-Za-z0-9_+.=\/-]{1,300}$/D', $cursor)))) {
-    $url = $feed['url'].($cursor === '' ? '' : '&cursor='.rawurlencode($cursor));
+} elseif ($feed && is_string($cursor) && is_string($until) &&
+    (($cursor === '' && $until === '') || (!empty($feed['cursor']) && preg_match('/^[A-Za-z0-9_+.=\/-]{1,300}$/D', $cursor) &&
+        preg_match('/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}$/D', $until)))) {
+    $url = $feed['url'].($cursor === '' ? '' :
+        '&cursor='.rawurlencode($cursor).'&updatedTo='.rawurlencode($until));
 } else {
     http_response_code(400);
     exit('Unknown feed or invalid page.');
